@@ -134,7 +134,7 @@ function ScheduleForm() {
 
           <Form.Group className="m-3">
             <Form.Label>
-              Tell us what you are looking for your athlete.
+              Tell us what you want for your athlete
             </Form.Label>
             <Form.Control
               name="request"
