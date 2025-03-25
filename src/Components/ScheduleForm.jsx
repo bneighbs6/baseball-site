@@ -16,7 +16,12 @@ function ScheduleForm() {
 
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent the default form submission
-    console.log("Submit clicked.");
+
+    // Check if lesson duration is selected
+    if (!lessonDuration) {
+      alert("Please select a lesson duration.");
+      return;
+    }
 
     // Send form data to Formspree
     const response = await fetch("https://formspree.io/f/xovelaak", {
@@ -33,6 +38,7 @@ function ScheduleForm() {
         "Your form has been submitted. You will receive an email responding to your request within 24 hours."
       );
       setForm({ ...initialFormState }); // Reset the form
+      setLessonDuration(""); // Reset the lesson duration
     } else {
       alert("There was a problem with your submission. Please try again.");
     }
@@ -62,13 +68,13 @@ function ScheduleForm() {
   return (
     <div className="schedule-form mx-5">
       <Card>
-        <h1>Schedule a Lesson</h1>
+        <h1 className="my-2">Schedule a Lesson</h1>
         <h4>
           Please fill out the form below. You will receive a response from a
           coach within 24 hours.
         </h4>
         <Form onSubmit={handleSubmit}>
-          <Form.Group className="mb-3">
+          <Form.Group className="mx-3">
             <Form.Label>Parent Name</Form.Label>
             <Form.Control
               name="parent_name" // Changed to match the state key
@@ -79,8 +85,8 @@ function ScheduleForm() {
               placeholder="Enter Parent's Name"
             />
           </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Athlete's Name</Form.Label>
+          <Form.Group className="mx-3">
+            <Form.Label className="my-1">Athlete's Name</Form.Label>
             <Form.Control
               name="athlete_name" // Changed to match the state key
               type="text"
@@ -90,8 +96,8 @@ function ScheduleForm() {
               placeholder="Enter your street address"
             />
           </Form.Group>
-          <Form.Group className="mb-3">
-            <Form.Label>Parent's Email Address</Form.Label>
+          <Form.Group className="mx-3">
+            <Form.Label className="my-1">Parent's Email Address</Form.Label>
             <Form.Control
               name="parent_email" // Changed to match the state key
               type="email"
@@ -102,11 +108,12 @@ function ScheduleForm() {
             />
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="my-1">
             <Form.Label>Lesson Duration</Form.Label>
             <Dropdown onSelect={handleLessonDurationChange}>
               <Dropdown.Toggle
                 variant="primary"
+                required
                 style={{
                   backgroundColor: "#003f85",
                   border: "none",
@@ -125,7 +132,7 @@ function ScheduleForm() {
             </Dropdown>
           </Form.Group>
 
-          <Form.Group className="mb-3">
+          <Form.Group className="m-3">
             <Form.Label>
               Tell us what you are looking for your athlete.
             </Form.Label>
@@ -141,6 +148,7 @@ function ScheduleForm() {
           </Form.Group>
           <Form.Group>
             <Button
+            className="my-3"
               variant="primary"
               style={{
                 backgroundColor: "#003f85",
