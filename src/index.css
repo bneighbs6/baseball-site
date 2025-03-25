@@ -18,3 +18,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  background-color: #00e6e6;
+  padding: 10px; 
+} 
+
+.submit-btn {
+  background-color: black;
+  color: #00e6e6;
+  border: none;
+  text-align: center;
+  margin: 5px; 
+  padding: 10px 20px;
+}

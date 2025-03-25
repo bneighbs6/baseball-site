@@ -7,13 +7,13 @@ import ScheduleForm from './Components/ScheduleForm';
 function App() {
   return (
     <div className="App">
-      <div className="header my-3">
+      <div id="header ">
         <Header />
       </div>
-      <div className="navbar mx-auto">
+      <div id="navbar">
         <NavigationBar />
       </div>
-      <div className="meetTheCoach">
+      <div id="meetTheCoach">
         <MeetTheCoach />
       </div>
       <div id="schedule">

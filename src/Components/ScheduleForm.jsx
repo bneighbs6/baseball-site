@@ -115,9 +115,9 @@ function ScheduleForm() {
                 variant="primary"
                 required
                 style={{
-                  backgroundColor: "#003f85",
+                  backgroundColor: "black",
                   border: "none",
-                  color: "white",
+                  color: "#00e6e6",
                 }}
               >
                 {lessonDuration || "Choose how long you want to train"}
@@ -148,13 +148,8 @@ function ScheduleForm() {
           </Form.Group>
           <Form.Group>
             <Button
-            className="my-3"
+            className="submit-btn my-3"
               variant="primary"
-              style={{
-                backgroundColor: "#003f85",
-                border: "none",
-                color: "white",
-              }}
               type="submit"
             >
               Submit
