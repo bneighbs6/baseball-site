@@ -93,7 +93,7 @@ function ScheduleForm() {
               required
               value={form.athlete_name}
               onChange={handleAthleteNameChange}
-              placeholder="Enter your street address"
+              placeholder="Enter Your Athlete's Name"
             />
           </Form.Group>
           <Form.Group className="mx-3">
