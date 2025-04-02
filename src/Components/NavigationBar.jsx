@@ -14,18 +14,17 @@ function NavigationBar() {
             smooth={true}
             duration={500}
             className="nav-link"
-            style={{ color: "#00e6e6", textAlign: "center", backgroundColor: "black", padding: "10px 20px", margin: "5px", borderRadius: "5px", textDecoration: "none" }}
+            style={{
+              color: "#00e6e6",
+              textAlign: "center",
+              backgroundColor: "black",
+              padding: "10px 20px",
+              margin: "5px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
           >
             Home
-          </Nav.Link>
-          {/* Need to style each nav link directly */}
-          <Nav.Link
-            as={Link}
-            to="services"
-            smooth={true}
-            duration={500}
-            style={{ color: "#00e6e6", textAlign: "center", backgroundColor: "black", padding: "10px 20px", margin: "5px", borderRadius: "5px", textDecoration: "none" }}          >
-            Services
           </Nav.Link>
           {/* Need to style each nav link directly */}
           <Nav.Link
@@ -33,8 +32,35 @@ function NavigationBar() {
             to="meetTheCoach"
             smooth={true}
             duration={500}
-            style={{ color: "#00e6e6", textAlign: "center", backgroundColor: "black", padding: "10px 20px", margin: "5px", borderRadius: "5px", textDecoration: "none" }}          >
+            style={{
+              color: "#00e6e6",
+              textAlign: "center",
+              backgroundColor: "black",
+              padding: "10px 20px",
+              margin: "5px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
             Meet The Coach
+          </Nav.Link>
+          {/* Need to style each nav link directly */}
+          <Nav.Link
+            as={Link}
+            to="services"
+            smooth={true}
+            duration={500}
+            style={{
+              color: "#00e6e6",
+              textAlign: "center",
+              backgroundColor: "black",
+              padding: "10px 20px",
+              margin: "5px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
+            Services
           </Nav.Link>
           {/* Need to style each nav link directly */}
           <Nav.Link
@@ -42,7 +68,16 @@ function NavigationBar() {
             to="schedule-form"
             smooth={true}
             duration={500}
-            style={{ color: "#00e6e6", textAlign: "center", backgroundColor: "black", padding: "10px 20px", margin: "5px", borderRadius: "5px", textDecoration: "none" }}          >
+            style={{
+              color: "#00e6e6",
+              textAlign: "center",
+              backgroundColor: "black",
+              padding: "10px 20px",
+              margin: "5px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
             Schedule a Lesson
           </Nav.Link>
         </Nav>

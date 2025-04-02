@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Dropdown, Form, Card } from "react-bootstrap";
 
 function ScheduleForm() {
@@ -13,6 +13,7 @@ function ScheduleForm() {
 
   const [form, setForm] = useState({ ...initialFormState });
   const [lessonDuration, setLessonDuration] = useState("");
+  const [price, setPrice] = useState(0);
 
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent the default form submission
@@ -63,6 +64,10 @@ function ScheduleForm() {
 
   function handleRequestChange(e) {
     setForm({ ...form, request: e.target.value });
+  }
+
+  function handlePriceChange() {
+    // Logic for price change here
   }
 
   return (
