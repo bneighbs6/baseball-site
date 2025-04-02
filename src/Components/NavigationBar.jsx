@@ -47,24 +47,6 @@ function NavigationBar() {
           {/* Need to style each nav link directly */}
           <Nav.Link
             as={Link}
-            to="services"
-            smooth={true}
-            duration={500}
-            style={{
-              color: "#00e6e6",
-              textAlign: "center",
-              backgroundColor: "black",
-              padding: "10px 20px",
-              margin: "5px",
-              borderRadius: "5px",
-              textDecoration: "none",
-            }}
-          >
-            Services
-          </Nav.Link>
-          {/* Need to style each nav link directly */}
-          <Nav.Link
-            as={Link}
             to="schedule-form"
             smooth={true}
             duration={500}
@@ -79,6 +61,24 @@ function NavigationBar() {
             }}
           >
             Schedule a Lesson
+          </Nav.Link>
+          {/* Need to style each nav link directly */}
+          <Nav.Link
+            as={Link}
+            to="services"
+            smooth={true}
+            duration={500}
+            style={{
+              color: "#00e6e6",
+              textAlign: "center",
+              backgroundColor: "black",
+              padding: "10px 20px",
+              margin: "5px",
+              borderRadius: "5px",
+              textDecoration: "none",
+            }}
+          >
+            Services
           </Nav.Link>
         </Nav>
       </Container>
