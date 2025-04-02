@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button, Dropdown, Form, Card } from "react-bootstrap";
 
 function ScheduleForm() {
-
   const initialFormState = {
     parent_name: "",
     athlete_name: "",
@@ -133,17 +132,18 @@ function ScheduleForm() {
                 <Dropdown.Item eventKey={"60 Min"}>60 Min</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown> */}
-  <Form.Select onChange={handleLessonDurationChange} value={form.lesson_duration}>
-    <option value="">*Choose How Long You Want To Train</option>
-    <option value="30 min">30 Min</option>
-    <option value="60 min">60 Min</option>
-  </Form.Select>
+            <Form.Select
+              onChange={handleLessonDurationChange}
+              value={form.lesson_duration}
+            >
+              <option value="">*Choose How Long You Want To Train</option>
+              <option value="30 min">30 Min</option>
+              <option value="60 min">60 Min</option>
+            </Form.Select>
           </Form.Group>
 
           <Form.Group className="m-3">
-            <Form.Label>
-              Tell us what you want for your athlete
-            </Form.Label>
+            <Form.Label>Tell us what you want for your athlete</Form.Label>
             <Form.Control
               name="request"
               as="textarea"
@@ -154,15 +154,9 @@ function ScheduleForm() {
               placeholder="e.g. 'I am looking for hitting lessons twice a week for four weeks for my son.'"
             ></Form.Control>
           </Form.Group>
+          <Form.Group></Form.Group>
           <Form.Group>
-
-          </Form.Group>
-          <Form.Group>
-            <Button
-            className="submit-btn my-3"
-              variant="primary"
-              type="submit"
-            >
+            <Button className="submit-btn my-3" variant="primary" type="submit">
               Submit
             </Button>
           </Form.Group>
