@@ -12,17 +12,16 @@ function ScheduleForm() {
   };
 
   const [form, setForm] = useState({ ...initialFormState });
-  const [lessonDuration, setLessonDuration] = useState("");
   const [price, setPrice] = useState(0);
 
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent the default form submission
 
     // Check if lesson duration is selected
-    if (!lessonDuration) {
-      alert("Please select a lesson duration.");
-      return;
-    }
+    // if (!lessonDuration) {
+    //   alert("Please select a lesson duration.");
+    //   return;
+    // }
 
     // Send form data to Formspree
     const response = await fetch("https://formspree.io/f/xovelaak", {
@@ -39,7 +38,7 @@ function ScheduleForm() {
         "Your form has been submitted. You will receive an email responding to your request within 24 hours."
       );
       setForm({ ...initialFormState }); // Reset the form
-      setLessonDuration(""); // Reset the lesson duration
+      setPrice(0); // Reset the price
     } else {
       alert("There was a problem with your submission. Please try again.");
     }
@@ -57,9 +56,8 @@ function ScheduleForm() {
     setForm({ ...form, parent_email: e.target.value });
   }
 
-  function handleLessonDurationChange(eventKey) {
-    setLessonDuration(eventKey); // Update the lesson duration state
-    setForm({ ...form, lesson_duration: eventKey }); // Update the form state
+  function handleLessonDurationChange(e) {
+    setForm({ ...form, lesson_duration: e.target.value }); // Update the form state
   }
 
   function handleRequestChange(e) {
@@ -67,7 +65,7 @@ function ScheduleForm() {
   }
 
   function handlePriceChange() {
-    // Logic for price change here
+    setPrice(price + 1);
   }
 
   return (
@@ -115,7 +113,7 @@ function ScheduleForm() {
 
           <Form.Group className="my-1">
             <Form.Label>Lesson Duration</Form.Label>
-            <Dropdown onSelect={handleLessonDurationChange}>
+            {/* <Dropdown onSelect={handleLessonDurationChange}>
               <Dropdown.Toggle
                 variant="primary"
                 required
@@ -134,7 +132,12 @@ function ScheduleForm() {
                 <Dropdown.Item eventKey={"30 Min"}>30 Min</Dropdown.Item>
                 <Dropdown.Item eventKey={"60 Min"}>60 Min</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
+            </Dropdown> */}
+  <Form.Select onChange={handleLessonDurationChange} value={form.lesson_duration}>
+    <option value="">*Choose How Long You Want To Train</option>
+    <option value="30 min">30 Min</option>
+    <option value="60 min">60 Min</option>
+  </Form.Select>
           </Form.Group>
 
           <Form.Group className="m-3">
@@ -150,6 +153,9 @@ function ScheduleForm() {
               onChange={handleRequestChange}
               placeholder="e.g. 'I am looking for hitting lessons twice a week for four weeks for my son.'"
             ></Form.Control>
+          </Form.Group>
+          <Form.Group>
+
           </Form.Group>
           <Form.Group>
             <Button
