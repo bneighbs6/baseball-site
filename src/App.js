@@ -7,7 +7,7 @@ import ScheduleForm from './Components/ScheduleForm';
 function App() {
   return (
     <div className="App">
-      <div id="header ">
+      <div id="header">
         <Header />
       </div>
       <div id="navbar">
