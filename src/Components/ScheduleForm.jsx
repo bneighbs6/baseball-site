@@ -16,7 +16,7 @@ function ScheduleForm() {
   useEffect(() => {
     console.log(price); // Stores the price in useEffect due to useState's async property
   }, [price]); // Effects each time price changes
-  
+
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent the default form submission
 
@@ -168,7 +168,7 @@ function ScheduleForm() {
             ></Form.Control>
           </Form.Group>
           <div className="m-3">
-            <h4>Total Price: ${price}</h4>
+            <h5>Total Price: ${price}</h5>
           </div>
           <Form.Group>
             <Button className="submit-btn my-3" variant="primary" type="submit">
