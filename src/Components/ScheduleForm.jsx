@@ -64,17 +64,26 @@ function ScheduleForm() {
     setForm({ ...form, lesson_duration: selectedDuration });
 
     // Update the price based on the selected duration
-    if(selectedDuration === "30 Min") {
+    if (selectedDuration === "30 Min") {
       setPrice(60);
-      console.log(price);
+      // Open Calendly Page for 30 Min Lesson
+      window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank");
     } else if (selectedDuration === "60 Min") {
       setPrice(100);
+      // Open Calendly Page for 60 Min Lesson
+      window.open("https://calendly.com/bneighbs6/60-min-baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank");
       console.log(price);
     } else {
       setPrice(0);
       console.log(price);
     }
   }
+
+
+//   <!-- Calendly inline widget begin -->
+// <div class="calendly-inline-widget" data-url="https://calendly.com/bneighbs6/60-min-baseball-lesson?background_color=1a1a1a&text_color=00e6e6&primary_color=ffffff" style="min-width:320px;height:700px;"></div>
+// <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+// <!-- Calendly inline widget end -->
 
   function handleRequestChange(e) {
     setForm({ ...form, request: e.target.value });
