@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Dropdown, Form, Card } from "react-bootstrap";
 
 function ScheduleForm() {
@@ -13,6 +13,10 @@ function ScheduleForm() {
   const [form, setForm] = useState({ ...initialFormState });
   const [price, setPrice] = useState(0);
 
+  useEffect(() => {
+    console.log(price); // Stores the price in useEffect due to useState's async property
+  }, [price]); // Effects each time price changes
+  
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent the default form submission
 
@@ -56,15 +60,24 @@ function ScheduleForm() {
   }
 
   function handleLessonDurationChange(e) {
-    setForm({ ...form, lesson_duration: e.target.value }); // Update the form state
+    const selectedDuration = e.target.value;
+    setForm({ ...form, lesson_duration: selectedDuration });
+
+    // Update the price based on the selected duration
+    if(selectedDuration === "30 Min") {
+      setPrice(60);
+      console.log(price);
+    } else if (selectedDuration === "60 Min") {
+      setPrice(100);
+      console.log(price);
+    } else {
+      setPrice(0);
+      console.log(price);
+    }
   }
 
   function handleRequestChange(e) {
     setForm({ ...form, request: e.target.value });
-  }
-
-  function handlePriceChange() {
-    setPrice(price + 1);
   }
 
   return (
@@ -137,8 +150,8 @@ function ScheduleForm() {
               value={form.lesson_duration}
             >
               <option value="">*Choose How Long You Want To Train</option>
-              <option value="30 min">30 Min</option>
-              <option value="60 min">60 Min</option>
+              <option value="30 Min">30 Min</option>
+              <option value="60 Min">60 Min</option>
             </Form.Select>
           </Form.Group>
 
@@ -154,7 +167,9 @@ function ScheduleForm() {
               placeholder="e.g. 'I am looking for hitting lessons twice a week for four weeks for my son.'"
             ></Form.Control>
           </Form.Group>
-          <Form.Group></Form.Group>
+          <div className="m-3">
+            <h4>Total Price: ${price}</h4>
+          </div>
           <Form.Group>
             <Button className="submit-btn my-3" variant="primary" type="submit">
               Submit
