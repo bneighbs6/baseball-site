@@ -2,7 +2,8 @@ import './App.css';
 import Header from './Components/Header';
 import MeetTheCoach from './Components/MeetTheCoach';
 import NavigationBar from './Components/NavigationBar';
-import ContactForm from './Components/ScheduleForm';
+import ContactForm from './Components/ContactForm';
+import Calendly from './Components/CalendlyForm';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <MeetTheCoach />
       </div>
       <div id="schedule">
-        {/* Scheudle Form Goes Here */}
+        <Calendly />
       </div>
       <div id="contact">
         <ContactForm />
