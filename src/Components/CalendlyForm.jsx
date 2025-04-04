@@ -2,6 +2,15 @@ import React from "react";
 import { Card, ListGroup } from "react-bootstrap";
 
 function Calendly() {
+
+    function handle30MinClick() {
+        window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank")
+    }
+
+    function handle60MinClick() {
+        window.open("https://calendly.com/bneighbs6/60-min-baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank")
+    }
+
     return (
       <div className="calendly mx-5">
         <Card xs="9">
@@ -16,8 +25,8 @@ function Calendly() {
               redirected to my calendar to set up a time for your lesson.
             </Card.Text>
             <Card.Body>
-              <button className="lesson-btn">30 Minute Lesson</button>
-              <button className="lesson-btn">60 Minute Lesson</button>
+              <button onClick={handle30MinClick} className="lesson-btn">30 Minute Lesson</button>
+              <button onClick={handle60MinClick} className="lesson-btn">60 Minute Lesson</button>
             </Card.Body>
           </Card.Body>
           <h3 className="pricing-header">Pricing</h3>
