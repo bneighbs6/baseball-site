@@ -92,7 +92,7 @@ function ContactForm() {
   return (
     <div className="schedule-form mx-5">
       <Card>
-        <h1 className="my-2">Schedule a Lesson</h1>
+        <h2 className="my-2">Contact Us</h2>
         <h4>
           Please fill out the form below. You will receive a response from a
           coach within 24 hours.
@@ -131,39 +131,6 @@ function ContactForm() {
               placeholder="Enter Parent's Email"
             />
           </Form.Group>
-
-          <Form.Group className="my-1">
-            <Form.Label>Lesson Duration</Form.Label>
-            {/* <Dropdown onSelect={handleLessonDurationChange}>
-              <Dropdown.Toggle
-                variant="primary"
-                required
-                style={{
-                  backgroundColor: "black",
-                  border: "none",
-                  color: "#00e6e6",
-                }}
-              >
-                {lessonDuration || "Choose how long you want to train"}
-              </Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item>
-                  *Choose how long you want to train
-                </Dropdown.Item>
-                <Dropdown.Item eventKey={"30 Min"}>30 Min</Dropdown.Item>
-                <Dropdown.Item eventKey={"60 Min"}>60 Min</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown> */}
-            <Form.Select
-              onChange={handleLessonDurationChange}
-              value={form.lesson_duration}
-            >
-              <option value="">*Choose How Long You Want To Train</option>
-              <option value="30 Min">30 Min</option>
-              <option value="60 Min">60 Min</option>
-            </Form.Select>
-          </Form.Group>
-
           <Form.Group className="m-3">
             <Form.Label>Tell us what you want for your athlete</Form.Label>
             <Form.Control
@@ -175,11 +142,6 @@ function ContactForm() {
               onChange={handleRequestChange}
               placeholder="e.g. 'I am looking for hitting lessons twice a week for four weeks for my son.'"
             ></Form.Control>
-          </Form.Group>
-          <div className="m-3">
-            <h5>Total Price: ${price}</h5>
-          </div>
-          <Form.Group>
             <Button className="submit-btn my-3" variant="primary" type="submit">
               Submit
             </Button>

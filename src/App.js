@@ -17,7 +17,7 @@ function App() {
       <div id="meetTheCoach">
         <MeetTheCoach />
       </div>
-      <div id="schedule">
+      <div id="calendly">
         <Calendly />
       </div>
       <div id="contact">

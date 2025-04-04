@@ -47,7 +47,7 @@ function NavigationBar() {
           {/* Need to style each nav link directly */}
           <Nav.Link
             as={Link}
-            to="schedule-form"
+            to="calendly"
             smooth={true}
             duration={500}
             style={{
