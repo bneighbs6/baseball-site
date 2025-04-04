@@ -65,7 +65,7 @@ function NavigationBar() {
           {/* Need to style each nav link directly */}
           <Nav.Link
             as={Link}
-            to="services"
+            to="contact"
             smooth={true}
             duration={500}
             style={{
@@ -78,7 +78,7 @@ function NavigationBar() {
               textDecoration: "none",
             }}
           >
-            Services
+            Contact Us
           </Nav.Link>
         </Nav>
       </Container>

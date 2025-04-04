@@ -2,7 +2,7 @@ import './App.css';
 import Header from './Components/Header';
 import MeetTheCoach from './Components/MeetTheCoach';
 import NavigationBar from './Components/NavigationBar';
-import ScheduleForm from './Components/ScheduleForm';
+import ContactForm from './Components/ScheduleForm';
 
 function App() {
   return (
@@ -17,7 +17,10 @@ function App() {
         <MeetTheCoach />
       </div>
       <div id="schedule">
-        <ScheduleForm />
+        {/* Scheudle Form Goes Here */}
+      </div>
+      <div id="contact">
+        <ContactForm />
       </div>
     </div>
   );

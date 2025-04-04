@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Dropdown, Form, Card } from "react-bootstrap";
 
-function ScheduleForm() {
+function ContactForm() {
   const initialFormState = {
     parent_name: "",
     athlete_name: "",
@@ -190,4 +190,4 @@ function ScheduleForm() {
   );
 }
 
-export default ScheduleForm;
+export default ContactForm;
