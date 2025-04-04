@@ -34,6 +34,13 @@ header {
 }
 
 .calendly {
+  display: block;
   align-items: center;
   margin: 20px; 
+}
+
+.pricing-header {
+  background-color: black;
+  color: #00e6e6;
+  margin: 0px;
 }
