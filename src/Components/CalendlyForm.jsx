@@ -4,11 +4,11 @@ import { Card, ListGroup } from "react-bootstrap";
 function Calendly() {
 
     function handle30MinClick() {
-        window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank")
+        window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=000000&primary_color=00e6e6", "_blank")
     }
 
     function handle60MinClick() {
-        window.open("https://calendly.com/bneighbs6/60-min-baseball-lesson?text_color=00e6e6&primary_color=000000", "_blank")
+        window.open("https://calendly.com/bneighbs6/60-min-baseball-lesson?text_color=000000&primary_color=00e6e6", "_blank")
     }
 
     return (
