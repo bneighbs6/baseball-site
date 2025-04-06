@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Accordion, Row, Col, Button } from "react-bootstrap";
+import { Card, Accordion, Row, Col } from "react-bootstrap";
 
 function Calendly() {
     function handle30MinClick() {
@@ -45,7 +45,7 @@ function Calendly() {
                             </Accordion>
                         </Col>
                         <Col xs={12} md={6} className="d-flex flex-column align-items-center">
-                            <button onClick={handle30MinClick} className="lesson-btn">
+                            <button onClick={handle30MinClick} className="lesson-btn mb-2">
                                 30 Minute Lesson
                             </button>
                             <button onClick={handle60MinClick} className="lesson-btn">

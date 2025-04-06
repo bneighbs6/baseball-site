@@ -62,12 +62,36 @@ header {
   border: #000 2px solid;
 }
 
+.lesson-btn {
+  width: 100%; /* Make buttons full width */
+  padding: 15px; /* Increase padding for larger buttons */
+  font-size: 18px; /* Increase font size for better readability */
+  background-color: #000; /* Bootstrap primary color */
+  color: #00E6E6; /* Text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.lesson-btn:hover {
+  background-color: #323232; /* Darker shade on hover */
+}
+
 .lesson-buttons {
   flex: 1; /* Take up half of the card */
   display: flex;
   flex-direction: column; /* Stack buttons vertically */
   justify-content: center; /* Center buttons vertically */
   padding: 20px;
+}
+
+/* Optional: Add media query for larger screens */
+@media (min-width: 768px) {
+  .lesson-btn {
+      font-size: 20px; /* Increase font size on medium screens */
+      padding: 20px; /* Increase padding on medium screens */
+  }
 }
 
 .pricing-section {
