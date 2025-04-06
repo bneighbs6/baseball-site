@@ -1,10 +1,10 @@
 import React from "react";
-import logo from "./logo.jpeg"
+import logoImage from "./NeighborlyNineLogo.png"
 
 function Header() { 
     return (
       <header className="logo-container text-center">
-        <img className="logo" src={logo} alt="Neighborly Nine Logo" />
+        <img className="logo" src={logoImage} alt="Neighborly Nine Logo" />
       </header>
     );
 }
