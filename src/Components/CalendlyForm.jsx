@@ -48,7 +48,7 @@ function Calendly() {
                   <ListGroup.Item>30 Min Lesson = $120</ListGroup.Item>
                   <ListGroup.Item>60 Min Lesson = $180</ListGroup.Item>
                 </ListGroup> */}
-                    <Accordion defaultActiveKey="0">
+                    <Accordion>
       <Accordion.Item eventKey="0">
         <Accordion.Header>One Athlete</Accordion.Header>
         <Accordion.Body>
