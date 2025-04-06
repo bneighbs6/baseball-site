@@ -1,9 +1,10 @@
 import React from "react";
+import logo from "../Components/logo.jpeg";
 
 function Header() { 
     return (
-      <header className="text-center">
-        <h1>Neighbors Baseball Academy</h1>
+      <header className="logo-container text-center">
+        <img className="logo" src={logo} />
       </header>
     );
 }
