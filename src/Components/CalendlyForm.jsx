@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, ListGroup } from "react-bootstrap";
+import { Card, ListGroup, Accordion } from "react-bootstrap";
 
 function Calendly() {
 
@@ -27,7 +27,7 @@ function Calendly() {
             <div className="flex-container">
               <div className="pricing-section">
                 <h3 className="pricing-header">Pricing</h3>
-                <ListGroup className="list-group-flush">
+                {/* <ListGroup className="list-group-flush">
                   <ListGroup.Item>
                     <h4>One Athlete</h4>
                   </ListGroup.Item>
@@ -47,7 +47,36 @@ function Calendly() {
                   </ListGroup.Item>
                   <ListGroup.Item>30 Min Lesson = $120</ListGroup.Item>
                   <ListGroup.Item>60 Min Lesson = $180</ListGroup.Item>
-                </ListGroup>
+                </ListGroup> */}
+                    <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>One Athlete</Accordion.Header>
+        <Accordion.Body>
+        30 Min Lesson = $60
+        </Accordion.Body>
+        <Accordion.Body>
+          60 Min Lesson = $100
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Two Athletes</Accordion.Header>
+        <Accordion.Body>
+        30 Min Lesson = $100
+        </Accordion.Body>
+        <Accordion.Body>
+          60 Min Lesson = $160
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="2">
+        <Accordion.Header>Three Athletes</Accordion.Header>
+        <Accordion.Body>
+        30 Min Lesson = $120
+        </Accordion.Body>
+        <Accordion.Body>
+          60 Min Lesson = $180
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
               </div>
               <div className="lesson-buttons">
                 <button onClick={handle30MinClick} className="lesson-btn">30 Minute Lesson</button>
