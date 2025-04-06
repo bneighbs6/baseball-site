@@ -90,8 +90,8 @@ function ContactForm() {
   }
 
   return (
-    <div className="schedule-form mx-5">
-      <Card>
+    <div className="mx-5">
+      <Card className="contact-form-card">
         <h2 className="my-2">Contact Us</h2>
         <h4>
           Please fill out the form below. You will receive a response from a

@@ -13,7 +13,7 @@ function Calendly() {
 
     return (
       <div className="calendly mx-5">
-        <Card xs="9">
+        <Card xs="9" className="calendly-card">
           <Card.Body>
             <Card.Title>
               <div className="lesson-header">
