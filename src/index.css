@@ -55,3 +55,22 @@ header {
   height: 250px;
   width: auto;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* Optional: space between items */
+}
+
+.lesson-buttons {
+  flex: 1; /* Take up half of the card */
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  justify-content: center; /* Center buttons vertically */
+  padding: 20px;
+}
+
+.pricing-section {
+  flex: 1; /* Take up half of the card */
+  padding: 20px; /* Optional: add some padding */
+  border: #00e6e6 10px solid;
+}
