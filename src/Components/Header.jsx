@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "./NeighborlyNineLogo.png"
+import logoImage from "./media/NeighborlyNineLogo.png"
 
 function Header() { 
     return (
