@@ -21,6 +21,7 @@ function MeetTheCoach() {
             the guidance and support needed to help you achieve your goals.
             Let’s work together to elevate your game!
             </p>
+            <p className="service-area">Serving the Flathead Valley</p>
         </Card>
       </div>
     );
