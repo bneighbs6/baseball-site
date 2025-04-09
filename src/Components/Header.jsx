@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "./media/Black.png"
+import logoImage from "./media/Transparent.png"
 
 function Header() { 
     return (
