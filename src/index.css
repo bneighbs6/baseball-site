@@ -110,3 +110,12 @@ header {
 .meet-the-coach-card, .calendly-card, .contact-form-card {
   border: #000 2px solid;
 }
+
+.nav-btn {
+  color: #00e6e6;
+  text-align: center;
+  background-color: black;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+}
