@@ -25,7 +25,7 @@ function NavigationBar() {
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="meetTheCoach"
+            to="calendly"
             smooth={true}
             duration={500}
           >
@@ -33,7 +33,7 @@ function NavigationBar() {
           </Nav.Link>
           <Nav.Link
             as={Link}
-            to="meetTheCoach"
+            to="contact"
             smooth={true}
             duration={500}
           >
