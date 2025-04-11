@@ -45,10 +45,21 @@ header {
   margin: 0px;
 }
 
-.logo-container {
+.header-logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.carousel-item {
+  height: auto; 
+  width: auto;
+}
+
+.carousel-item img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .logo {
