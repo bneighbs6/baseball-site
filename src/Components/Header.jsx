@@ -15,31 +15,37 @@ function Header() {
     return (
       <header className="header-container">
         <Carousel className="carousel-background">
-          <Carousel.Item className="carousel-item" interval={2000}>
+          {/* <Carousel.Item className="carousel-item" interval={2500}>
             <img src={fielding1} alt="coach instructing baseball drill" />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          <Carousel.Item className="carousel-item" interval={2500}>
             <img src={fielding2} alt="coach instructing baseball drill" />
+          </Carousel.Item> */}
+          <Carousel.Item className="carousel-item" interval={2500}>
+            <img 
+            src={fielding3}
+            alt="coach instructing baseball drill"
+            style={{ objectPosition: "50% 35.5%", width: "100%", height: "100%", objectFit: "cover" }}  />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
-            <img src={fielding3} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          {/* <Carousel.Item className="carousel-item" interval={2500}>
             <img src={leftySwing1} alt="coach instructing baseball drill" />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          <Carousel.Item className="carousel-item" interval={2500}>
             <img src={rightySwing1} alt="coach instructing baseball drill" />
+          </Carousel.Item> */}
+          <Carousel.Item className="carousel-item" interval={2500}>
+            <img 
+            src={tee1} 
+            alt="coach instructing baseball drill"
+            style={{ objectPosition: "50% 28%", width: "100%", height: "100%", objectFit: "cover" }}  />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
-            <img src={tee1} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          {/* <Carousel.Item className="carousel-item" interval={2500}>
             <img src={tee2} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          </Carousel.Item> */}
+          <Carousel.Item className="carousel-item" interval={2500}>
             <img src={standingWithBat} alt="coach instructing baseball drill" />
           </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={2000}>
+          <Carousel.Item className="carousel-item" interval={2500}>
             <img src={ballOnTee} alt="coach instructing baseball drill" />
           </Carousel.Item>
         </Carousel>

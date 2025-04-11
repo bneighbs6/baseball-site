@@ -68,9 +68,8 @@ header {
 
 .logo {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  left: 12%;
-  transform: translateX(-50%); /* Center the logo */
+  top: 10px; /* Adjust as needed for spacing from the top */
+  left: 20px; /* Adjust as needed for spacing from the left */
   z-index: 2; /* Ensure logo is above the carousel */
   max-width: 150px; /* Limit the width of the logo */
   height: auto; /* Maintain aspect ratio */
