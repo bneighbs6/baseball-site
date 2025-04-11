@@ -11,7 +11,7 @@ function NavigationBar() {
             as={Link}
             to="header" // Brings user to the top of the webpage if clicked
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             <button className="nav-btn">Home</button>
           </Nav.Link>
@@ -19,7 +19,7 @@ function NavigationBar() {
             as={Link}
             to="meetTheCoach"
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             <button className="nav-btn">Meet The Coach</button>
           </Nav.Link>
@@ -27,7 +27,7 @@ function NavigationBar() {
             as={Link}
             to="calendly"
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             <button className="nav-btn">Schedule a Lesson</button>
           </Nav.Link>
@@ -35,7 +35,7 @@ function NavigationBar() {
             as={Link}
             to="contact"
             smooth={true}
-            duration={500}
+            duration={1000}
           >
             <button className="nav-btn">Contact Us</button>
           </Nav.Link>
