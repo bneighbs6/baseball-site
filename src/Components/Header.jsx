@@ -15,35 +15,6 @@ function Header() {
     return (
       <header className="header-logo-container text-center">
         <img className="logo" src={logoImage} alt="Neighborly Nine Logo" />
-        <Carousel>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={fielding1} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={fielding2} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={fielding3} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={leftySwing1} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={rightySwing1} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={tee1} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={tee2} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={standingWithBat} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-          <Carousel.Item className="carousel-item" interval={1000}>
-            <img src={ballOnTee} alt="coach instructing baseball drill" />
-          </Carousel.Item>
-        </Carousel>
       </header>
     );
 }
