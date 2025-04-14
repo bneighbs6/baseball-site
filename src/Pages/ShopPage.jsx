@@ -6,17 +6,7 @@ import Footer from "../Components/Footer";
 function ShopPage() {
     return (
       <div className="shop-page">
-        <div className="App">
-          <div id="header">
-            <Header />
-          </div>
-          <div id="navbar">
-            <NavigationBar />
-          </div>
-          <div id="footer">
-            <Footer />
-          </div>
-        </div>
+        <p>Shop Page.</p>
       </div>
     );
 }
