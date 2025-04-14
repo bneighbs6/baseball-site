@@ -4,6 +4,7 @@ import MeetTheCoach from './Components/MeetTheCoach';
 import NavigationBar from './Components/NavigationBar';
 import Calendly from './Components/CalendlyForm';
 import ContactForm from './Components/ContactForm';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -22,6 +23,9 @@ function App() {
       </div>
       <div id="contact">
         <ContactForm />
+      </div>
+      <div id="footer">
+        <Footer />
       </div>
     </div>
   );
