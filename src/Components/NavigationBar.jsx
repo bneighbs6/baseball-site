@@ -32,6 +32,13 @@ function NavigationBar() {
             <button className="nav-btn">Schedule a Lesson</button>
           </Nav.Link>
           <Nav.Link
+            href="https://diamond-dev-apparel.printify.me/"
+            target="_blank"
+            
+          >
+            <button className="nav-btn">Shop</button>
+          </Nav.Link>
+          <Nav.Link
             as={Link}
             to="contact"
             smooth={true}
