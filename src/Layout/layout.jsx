@@ -9,7 +9,7 @@ import Footer from "../Components/Footer";
 
 function Layout() {
     return (
-        <div className="App">
+      <div className="layout">
         <div id="meetTheCoach">
           <MeetTheCoach />
         </div>

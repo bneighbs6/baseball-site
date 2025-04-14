@@ -8,17 +8,19 @@ import Layout from "./Layout/layout";
 function App() {
   return (
     <Router>
-      <div id="header">
-        <Header />
-      </div>
-      <div id="navbar">
-        <NavigationBar />
-      </div>
-      <div className="router-container">
-        <Routes>
-          <Route path="/" element={<Layout />} />
-          <Route path="/shop" element={<ShopPage />} />
-        </Routes>
+      <div className="App">
+        <div id="header">
+          <Header />
+        </div>
+        <div id="navbar">
+          <NavigationBar />
+        </div>
+        <div className="router-container">
+          <Routes>
+            <Route path="/" element={<Layout />} />
+            <Route path="/shop" element={<ShopPage />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
