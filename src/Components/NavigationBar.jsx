@@ -42,7 +42,6 @@ function NavigationBar() {
           <Nav.Link
             href="https://diamond-dev-apparel.printify.me/"
             target="_blank"
-            
           >
             <button className="nav-btn">Shop</button>
           </Nav.Link>
