@@ -1,38 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import Header from './Components/Header';
-import MeetTheCoach from './Components/MeetTheCoach';
-import NavigationBar from './Components/NavigationBar';
-import Calendly from './Components/CalendlyForm';
-import ContactForm from './Components/ContactForm';
-import Footer from './Components/Footer';
+import Header from "./Components/Header";
+import NavigationBar from "./Components/NavigationBar";
 import ShopPage from "./Pages/ShopPage";
+import Layout from "./Layout/layout";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <div id="header">
-          <Header />
-        </div>
-        <div id="navbar">
-          <NavigationBar />
-        </div>
-        <div id="meetTheCoach">
-          <MeetTheCoach />
-        </div>
-        <div id="calendly">
-          <Calendly />
-        </div>
-        <div id="contact">
-          <ContactForm />
-        </div>
-        <div id="footer">
-          <Footer />
-        </div>
+      <div id="header">
+        <Header />
+      </div>
+      <div id="navbar">
+        <NavigationBar />
       </div>
       <div className="router-container">
         <Routes>
+          <Route path="/" element={<Layout />} />
           <Route path="/shop" element={<ShopPage />} />
         </Routes>
       </div>

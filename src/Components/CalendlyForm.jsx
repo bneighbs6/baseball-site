@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, Accordion, Row, Col } from "react-bootstrap";
 
-function Calendly() {
+function CalendlyForm() {
     function handle30MinClick() {
         window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=000000&primary_color=00e6e6", "_blank");
     }
@@ -59,4 +59,4 @@ function Calendly() {
     );
 }
 
-export default Calendly;
+export default CalendlyForm;
