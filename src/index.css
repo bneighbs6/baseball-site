@@ -168,3 +168,10 @@ header {
 .shop-apparel-card, .shop-strength-training-card {
   margin: 20px;
 }
+
+.shop-card-img {
+  display: block;
+  margin: 20px auto; /* Center the image horizontally */
+  max-width: 200px;
+  max-height: 200px;
+}

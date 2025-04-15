@@ -17,6 +17,7 @@ function ShopPage() {
       <div className="shop-apparel-card">
         <Card className="text-center">
           <Card.Header>Diamond Dev Apparel</Card.Header>
+          <Card.Img className="shop-card-img" src="../media/Black.png"></Card.Img>
           <Card.Body>
             <Card.Title>Shop Our New Styles Now</Card.Title>
             <Card.Text>
@@ -40,6 +41,7 @@ function ShopPage() {
       <div className="shop-strength-training-card">
         <Card className="text-center">
           <Card.Header>Strength</Card.Header>
+          <Card.Img className="shop-card-img" src="../media/Transparent.png"></Card.Img>
           <Card.Body>
             <Card.Title>CSCS Tested & Proven Programs</Card.Title>
             <Card.Text>
