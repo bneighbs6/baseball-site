@@ -138,3 +138,12 @@ header {
   margin: 5px;
   border-radius: 5px;
 }
+
+/* Shop Page Construction Icons */
+
+.construction-icon {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  padding: 5px;
+}
