@@ -28,6 +28,8 @@ function ShopPage() {
         style={{ "--fa-animation-duration": "3s" }}
       />
       <h5>Shop Page Under Construction</h5>
+      <br></br>
+      <Footer />
     </div>
   );
 }
