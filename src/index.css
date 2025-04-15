@@ -24,13 +24,17 @@ header {
   padding: 20px; 
 } 
 
-.submit-btn, .lesson-btn {
+.submit-btn, .lesson-btn, .shop-apparel-btn, .shop-strength-training-btn {
   background-color: black;
   color: #00e6e6;
   border: none;
   text-align: center;
   margin: 5px; 
   padding: 10px 20px;
+}
+
+.submit-btn:hover, .lesson-btn:hover, .shop-apparel-btn:hover, .shop-strength-training-btn:hover {
+  background-color: #323232;
 }
 
 .calendly {
@@ -139,6 +143,10 @@ header {
   border-radius: 5px;
 }
 
+.nav-btn:hover {
+  background-color: #323232;
+}
+
 /* Shop Page Construction Icons */
 
 .construction-icon {
@@ -146,4 +154,9 @@ header {
   height: 100px;
   margin: 5px;
   padding: 5px;
+}
+
+/* Shop Page CSS */
+.shop-apparel-card, .shop-strength-training-card {
+  margin: 20px;
 }
