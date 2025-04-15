@@ -37,6 +37,14 @@ header {
   background-color: #323232;
 }
 
+.shop-strength-training-btn:disabled {
+  background-color: black; /* Keep the same background color */
+  color: #00e6e6; /* Keep the same text color */
+  cursor: not-allowed; /* Change cursor to indicate it's disabled */
+  opacity: 0.6; /* Optional: make it slightly transparent */
+  text-decoration: line-through;
+}
+
 .calendly {
   display: block;
   align-items: center;

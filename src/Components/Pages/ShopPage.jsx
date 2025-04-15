@@ -20,8 +20,13 @@ function ShopPage() {
           <Card.Body>
             <Card.Title>Shop Our New Styles Now</Card.Title>
             <Card.Text>
-              With supporting text below as a natural lead-in to additional
-              content.
+              Discover the perfect blend of style and comfort with our exclusive
+              Diamond Dev Apparel collection! Each piece is designed with
+              high-quality materials to ensure you look great while feeling even
+              better. Whether you're hitting the gym, running errands, or just
+              lounging at home, our apparel is tailored to fit your lifestyle.
+              Don't miss out on our latest styles and limited-time offers—shop
+              now and elevate your wardrobe!
             </Card.Text>
             <Link to="https://diamond-dev-apparel.printify.me/" target="_blank">
               <Button className="shop-apparel-btn">
@@ -38,10 +43,15 @@ function ShopPage() {
           <Card.Body>
             <Card.Title>CSCS Tested & Proven Programs</Card.Title>
             <Card.Text>
-              With supporting text below as a natural lead-in to additional
-              content.
+              Get ready to elevate your game with our CSCS Tested & Proven
+              Baseball Strength Program! Designed by experts, this program
+              focuses on building strength, speed, and agility to help you
+              perform at your best on the field. While this program is currently
+              unavailable, stay tuned for its launch—your opportunity to
+              transform your training is just around the corner! Sign up for
+              updates and be the first to know when it becomes available!
             </Card.Text>
-            <Button className="shop-strength-training-btn">
+            <Button disabled className="shop-strength-training-btn">
               Baseball Strength Program
             </Button>
           </Card.Body>
