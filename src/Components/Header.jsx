@@ -1,5 +1,5 @@
 import React from "react";
-import logoImage from "../media/Transparent.png";
+import logoImage from "../media/DiamondDevTransparent.png";
 import fielding1 from "../media/fielding1.jpg";
 import fielding2 from "../media/fielding2.jpg";
 import fielding3 from "../media/fieliding3.jpg";
