@@ -26,7 +26,7 @@ header {
 
 .submit-btn, .lesson-btn, .shop-apparel-btn, .shop-strength-training-btn {
   background-color: black;
-  color: #00e6e6;
+  color: white;
   border: none;
   text-align: center;
   margin: 5px; 
@@ -39,7 +39,7 @@ header {
 
 .shop-strength-training-btn:disabled {
   background-color: black; /* Keep the same background color */
-  color: #00e6e6; /* Keep the same text color */
+  color: white; /* Keep the same text color */
   cursor: not-allowed; /* Change cursor to indicate it's disabled */
   opacity: 0.6; /* Optional: make it slightly transparent */
   text-decoration: line-through;
@@ -53,7 +53,7 @@ header {
 
 .pricing-header {
   background-color: black;
-  color: #00e6e6;
+  color: white;
   margin: 0px;
 }
 
@@ -98,7 +98,7 @@ header {
   padding: 15px; /* Increase padding for larger buttons */
   font-size: 18px; /* Increase font size for better readability */
   background-color: #000; /* Bootstrap primary color */
-  color: #00E6E6; /* Text color */
+  color: white; /* Text color */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
   cursor: pointer; /* Pointer cursor on hover */
@@ -128,7 +128,7 @@ header {
 .pricing-section {
   flex: 1; /* Take up half of the card */
   padding: 20px; /* Optional: add some padding */
-  border: #00e6e6 5px solid;
+  border: white 5px solid;
 }
 
 .meet-the-coach-container {
@@ -143,7 +143,7 @@ header {
 }
 
 .nav-btn {
-  color: #00e6e6;
+  color: white;
   text-align: center;
   background-color: black;
   padding: 10px 20px;
