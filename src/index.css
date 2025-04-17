@@ -175,3 +175,9 @@ header {
   max-width: 200px;
   max-height: 200px;
 }
+
+/* Home Page CSS */
+.home-page-body {
+  font-weight: 450;
+  margin: 10px 20px;
+}

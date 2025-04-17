@@ -8,6 +8,7 @@ import MeetTheCoach from "./Components/MeetTheCoach";
 import ContactForm from "./Components/ContactForm";
 import CalendlyForm from "./Components/CalendlyForm";
 import Footer from "./Components/Footer";
+import HomePage from "./Components/Pages/HomePage";
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
         </div>
         <div className="router-container">
           <Routes>
-            {/* <Route path="/" element={<Layout />} /> */}
+            <Route path="/" element={<HomePage />} />
             <Route path="/meet" element={<MeetTheCoach />} />
             <Route path="/schedule" element={<CalendlyForm />} />
             <Route path="/contact" element={<ContactForm />} />
