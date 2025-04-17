@@ -10,13 +10,13 @@ function NavigationBar() {
           <Nav.Link href="/">
             <button className="nav-btn">Home</button>
           </Nav.Link>
-          <Nav.Link as={Link} to="meetTheCoach" smooth={true} duration={1000}>
+          <Nav.Link href="/meet">
             <button className="nav-btn">Meet The Coach</button>
           </Nav.Link>
-          <Nav.Link as={Link} to="calendly" smooth={true} duration={1000}>
+          <Nav.Link href="/schedule">
             <button className="nav-btn">Schedule a Lesson</button>
           </Nav.Link>
-          <Nav.Link as={Link} to="contact" smooth={true} duration={1000}>
+          <Nav.Link href="/contact">
             <button className="nav-btn">Contact Us</button>
           </Nav.Link>
           <Nav.Link href="/shop">

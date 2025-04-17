@@ -7,6 +7,7 @@ import Layout from "./Layout/layout";
 import MeetTheCoach from "./Components/MeetTheCoach";
 import ContactForm from "./Components/ContactForm";
 import CalendlyForm from "./Components/CalendlyForm";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/shop" element={<ShopPage />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
