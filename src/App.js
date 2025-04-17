@@ -4,6 +4,9 @@ import Header from "./Components/Header";
 import NavigationBar from "./Components/NavigationBar";
 import ShopPage from "./Components/Pages/ShopPage";
 import Layout from "./Layout/layout";
+import MeetTheCoach from "./Components/MeetTheCoach";
+import ContactForm from "./Components/ContactForm";
+import CalendlyForm from "./Components/CalendlyForm";
 
 function App() {
   return (
@@ -17,7 +20,10 @@ function App() {
         </div>
         <div className="router-container">
           <Routes>
-            <Route path="/" element={<Layout />} />
+            {/* <Route path="/" element={<Layout />} /> */}
+            <Route path="/meet" element={<MeetTheCoach />} />
+            <Route path="/schedule" element={<CalendlyForm />} />
+            <Route path="/contact" element={<ContactForm />} />
             <Route path="/shop" element={<ShopPage />} />
           </Routes>
         </div>
