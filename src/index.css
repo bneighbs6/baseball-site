@@ -147,11 +147,11 @@ header {
 
 .meet-the-coach-container {
   display: flex;
-  align-items: center;
-  width: fit-content;
-  margin: auto;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center;     /* Center the card vertically */
+  width: 100%;             /* Take full width of the parent */
+  margin: auto;            /* Center the container itself */
   padding: 20px;
-  max-height: fit-content;
 }
 
 .meet-the-coach-img {
@@ -162,7 +162,13 @@ header {
 }
 
 .meet-the-coach-card, .calendly-card, .contact-form-card, .advertising-card {
-  border: #000 2px solid;
+  border: #000 3px solid;
+}
+
+.meet-the-coach-card {
+  width: 50rem;           /* Set a fixed width for the card */
+  border: #000 3px solid; /* Border styling */
+  margin: 0 auto;
 }
 
 .nav-btn {
