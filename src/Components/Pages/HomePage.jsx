@@ -1,4 +1,5 @@
 import React from "react";
+import { Button, Card } from "react-bootstrap";
 
 function HomePage() {
     return (
@@ -25,6 +26,22 @@ function HomePage() {
             begins!
           </p>
           <p>Play ball! ⚾️</p>
+        </div>
+        <div className="advertising-card">
+          <Card>
+            <Card.Title>The New Baseball Strength Program</Card.Title>
+            <Card.Body>
+              Be stronger in the box, throw harder in the field or on the mound,
+              and be better than everyone else with the Baseball Strength
+              Program. This program is designed to develop the necessary
+              strength needed to accel in the game of baseball. Choose your
+              level of experience in the weight room and we will deliver the
+              best training program available.
+
+              Click below to get started.
+            </Card.Body>
+            <button className="home-page-advertising-card-btn">Click Here to Get Strong</button>
+          </Card>
         </div>
       </div>
     );

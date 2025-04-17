@@ -90,7 +90,7 @@ function ContactForm() {
   }
 
   return (
-    <div className="mx-5">
+    <div className="contact-form-container mx-5">
       <Card className="contact-form-card">
         <h2 className="my-2">Contact Us</h2>
         <h4>
