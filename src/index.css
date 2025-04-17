@@ -160,7 +160,7 @@ header {
   border-radius: 5px;
 }
 
-.nav-btn:hover {
+.nav-btn:hover, .home-page-advertising-card-btn:hover {
   background-color: #323232;
 }
 
@@ -200,4 +200,11 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   max-width: fit-content;
+}
+
+.advertising-card {
+  display: block;
+  align-items: center;
+  margin: 20px;
+  border: black 2px solid;
 }

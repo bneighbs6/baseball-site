@@ -3,7 +3,7 @@ import { Button, Card } from "react-bootstrap";
 
 function HomePage() {
     return (
-      <div className="home-page">
+      <div className="home-page mx-5">
         <h2>Welcome to Diamond Development!</h2>
         <div className="home-page-body">
           <p>
@@ -27,8 +27,8 @@ function HomePage() {
           </p>
           <p>Play ball! ⚾️</p>
         </div>
-        <div className="advertising-card">
-          <Card>
+        <div className="home-page-card-container">
+          <Card xs="9" className="advertising-card">
             <Card.Title>The New Baseball Strength Program</Card.Title>
             <Card.Body>
               Be stronger in the box, throw harder in the field or on the mound,
@@ -37,10 +37,13 @@ function HomePage() {
               strength needed to accel in the game of baseball. Choose your
               level of experience in the weight room and we will deliver the
               best training program available.
-
-              Click below to get started.
             </Card.Body>
-            <button className="home-page-advertising-card-btn">Click Here to Get Strong</button>
+            <Card.Body>
+              Stay tuned for the Baseball Strength Program Launch Date
+            </Card.Body>
+            <button className="home-page-advertising-card-btn">
+              Click Here to Get Strong
+            </button>
           </Card>
         </div>
       </div>
