@@ -41,7 +41,7 @@ function HomePage() {
             <Card.Body>
               Stay tuned for the Baseball Strength Program Launch Date
             </Card.Body>
-            <button className="home-page-advertising-card-btn">
+            <button disabled className="home-page-advertising-card-btn">
               Click Here to Get Strong
             </button>
           </Card>

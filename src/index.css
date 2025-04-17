@@ -37,7 +37,7 @@ header {
   background-color: #323232;
 }
 
-.shop-strength-training-btn:disabled {
+.shop-strength-training-btn:disabled, .home-page-advertising-card-btn:disabled {
   background-color: black; /* Keep the same background color */
   color: white; /* Keep the same text color */
   cursor: not-allowed; /* Change cursor to indicate it's disabled */
