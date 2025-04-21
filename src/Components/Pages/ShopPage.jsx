@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ShopPage() {
     return (
         <div className="uniform-container">
-            <div className="shop-apparel-card">
+            <div className="shop-card">
                 <Card className="text-center uniform-card">
                     <Card.Header>Diamond Dev Apparel</Card.Header>
                     <Card.Img className="shop-card-img" src="../media/DiamondDevTransparent.png" />
@@ -29,7 +29,7 @@ function ShopPage() {
                     <Card.Footer className="text-muted">Shop Now</Card.Footer>
                 </Card>
             </div>
-            <div className="shop-strength-training-card">
+            <div className="shop-card">
                 <Card className="text-center uniform-card">
                     <Card.Header>Strength</Card.Header>
                     <Card.Img className="shop-card-img" src="../media/DiamondDevTransparent.png" />
