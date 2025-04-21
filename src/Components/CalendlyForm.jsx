@@ -11,17 +11,12 @@ function CalendlyForm() {
     }
 
     return (
-        <div className="calendly mx-5">
-            <Card xs="9" className="calendly-card">
+        <div className="uniform-container">
+            <Card className="uniform-card">
                 <Card.Body>
-                    <Card.Title>
-                        <div className="lesson-header">
-                            <h3>Schedule a Lesson</h3>
-                        </div>
-                    </Card.Title>
+                    <Card.Title className="uniform-title">Schedule a Lesson</Card.Title>
                     <Card.Text>
-                        Click on the duration you want your lesson to be and you will be
-                        redirected to my calendar to set up a time for your lesson.
+                        Click on the duration you want your lesson to be and you will be redirected to my calendar to set up a time for your lesson.
                     </Card.Text>
                     <Row className="mb-3">
                         <Col xs={12} md={6}>

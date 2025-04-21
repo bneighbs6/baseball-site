@@ -174,7 +174,7 @@ header {
   border-radius: 5px;
 }
 
-.nav-btn:hover, .home-page-advertising-card-btn:hover {
+.nav-btn:hover, .home-page-btn:hover {
   background-color: #323232;
 }
 
@@ -205,7 +205,7 @@ header {
   margin: 10px 20px;
 }
 
-.home-page-advertising-card-btn {
+.home-page-btn {
   display: block; /* Make the button a block element */
   margin: 10px auto; /* Center the button horizontally */
   color: white;
@@ -214,11 +214,53 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   max-width: fit-content;
-}
+} 
 
-.advertising-card {
+/* .advertising-card {
   display: block;
   align-items: center;
   margin: 20px;
   border: black 2px solid;
+} */
+
+.uniform-container {
+  display: flex;
+  justify-content: center; /* Center the card horizontally */
+  align-items: center;     /* Center the card vertically */
+  width: 100%;             /* Take full width of the parent */
+  margin: auto;            /* Center the container itself */
+  padding: 20px;
+}
+
+.uniform-card {
+  border: #000 3px solid;
+  width: 100%; /* Make the card responsive */
+  max-width: 600px; /* Set a max width for larger screens */
+}
+
+.uniform-title {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.submit-btn, .lesson-btn {
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+  margin: 5px; 
+  padding: 10px 20px;
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.submit-btn:hover, .lesson-btn:hover {
+  background-color: #323232; /* Darker shade on hover */
+}
+
+.pricing-header {
+  background-color: black;
+  color: white;
+  margin: 0px;
+  padding: 10px; 
 }
