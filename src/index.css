@@ -165,12 +165,6 @@ header {
   border: #000 3px solid;
 }
 
-.meet-the-coach-card {
-  width: 50rem;           /* Set a fixed width for the card */
-  border: #000 3px solid; /* Border styling */
-  margin: 0 auto;
-}
-
 .nav-btn {
   color: white;
   text-align: center;

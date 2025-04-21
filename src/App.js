@@ -20,7 +20,7 @@ function App() {
         <div id="navbar">
           <NavigationBar />
         </div>
-        <div className="router-container">
+        <div className="router-container mx-5">
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/meet" element={<MeetTheCoach />} />

@@ -5,7 +5,7 @@ import CarouselOfImages from "./CarouselOfImages";
 function MeetTheCoach() {
     return (
       <div className="meet-the-coach-container">
-        <Card className="meet-the-coach-card">
+        <Card xs="9" className="meet-the-coach-card">
           <CarouselOfImages />
           <Card.Title>Meet Coach Brett Neighbors</Card.Title>
           <Card.Body>
