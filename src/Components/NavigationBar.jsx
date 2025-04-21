@@ -8,19 +8,19 @@ function NavigationBar() {
       <Container>
         <Nav className="mx-auto">
           <Nav.Link href="/">
-            <button className="nav-btn">Home</button>
+            <button className="uniform-btn-nav">Home</button>
           </Nav.Link>
           <Nav.Link href="/meet">
-            <button className="nav-btn">Meet The Coach</button>
+            <button className="uniform-btn-nav">Meet The Coach</button>
           </Nav.Link>
           <Nav.Link href="/schedule">
-            <button className="nav-btn">Schedule a Lesson</button>
+            <button className="uniform-btn-nav">Schedule a Lesson</button>
           </Nav.Link>
           <Nav.Link href="/contact">
-            <button className="nav-btn">Contact Us</button>
+            <button className="uniform-btn-nav">Contact Us</button>
           </Nav.Link>
           <Nav.Link href="/shop">
-            <button className="nav-btn">Shop</button>
+            <button className="uniform-btn-nav">Shop</button>
           </Nav.Link>
         </Nav>
       </Container>

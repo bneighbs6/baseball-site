@@ -83,7 +83,7 @@ function ContactForm() {
                             onChange={(e) => setForm({ ...form, request: e.target.value })}
                             placeholder="e.g. 'I am looking for hitting lessons twice a week for four weeks for my son.'"
                         />
-                        <Button className="submit-btn" variant="primary" type="submit">Submit</Button>
+                        <button className="submit-btn uniform-btn-contact-submit" variant="primary" type="submit">Submit</button>
                     </Form.Group>
                 </Form>
             </Card>

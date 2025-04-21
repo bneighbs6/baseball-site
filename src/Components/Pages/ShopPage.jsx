@@ -21,9 +21,9 @@ function ShopPage() {
                             now and elevate your wardrobe!
                         </Card.Text>
                         <Link to="https://diamond-dev-apparel.printify.me/" target="_blank">
-                            <Button className="shop-apparel-btn">
+                            <button className="uniform-btn">
                                 Diamond Dev Apparel Shop
-                            </Button>
+                            </button>
                         </Link>
                     </Card.Body>
                     <Card.Footer className="text-muted">Shop Now</Card.Footer>
@@ -44,9 +44,9 @@ function ShopPage() {
                             transform your training is just around the corner! Sign up for
                             updates and be the first to know when it becomes available!
                         </Card.Text>
-                        <Button disabled className="shop-strength-training-btn">
+                        <button disabled className="uniform-btn">
                             Baseball Strength Program
-                        </Button>
+                        </button>
                     </Card.Body>
                     <Card.Footer className="text-muted">Shop Now</Card.Footer>
                 </Card>

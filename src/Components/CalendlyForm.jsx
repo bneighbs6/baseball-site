@@ -20,7 +20,7 @@ function CalendlyForm() {
                     </Card.Text>
                     <Row className="mb-3">
                         <Col xs={12} md={6}>
-                            <h3 className="pricing-header">Pricing</h3>
+                            <h3 className="uniform-title-pricing">Pricing</h3>
                             <Accordion>
                                 <Accordion.Item eventKey="0">
                                     <Accordion.Header>One Athlete</Accordion.Header>
@@ -40,10 +40,10 @@ function CalendlyForm() {
                             </Accordion>
                         </Col>
                         <Col xs={12} md={6} className="d-flex flex-column align-items-center">
-                            <button onClick={handle30MinClick} className="lesson-btn mb-2">
+                            <button onClick={handle30MinClick} className="uniform-btn-lesson">
                                 30 Minute Lesson
                             </button>
-                            <button onClick={handle60MinClick} className="lesson-btn">
+                            <button onClick={handle60MinClick} className="uniform-btn-lesson">
                                 60 Minute Lesson
                             </button>
                         </Col>

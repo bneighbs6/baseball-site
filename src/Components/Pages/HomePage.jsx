@@ -29,7 +29,7 @@ function HomePage() {
             </div>
             <div className="home-page-card-container">
                 <Card className="uniform-card">
-                    <Card.Title>The New Baseball Strength Program</Card.Title>
+                    <Card.Title className="uniform-title">The New Baseball Strength Program</Card.Title>
                     <Card.Body>
                         Be stronger in the box, throw harder in the field or on the mound,
                         and be better than everyone else with the Baseball Strength
@@ -41,7 +41,7 @@ function HomePage() {
                     <Card.Body>
                         Stay tuned for the Baseball Strength Program Launch Date
                     </Card.Body>
-                    <button disabled className="home-page-btn">
+                    <button disabled className="uniform-btn-home-card">
                         Click Here to Get Strong
                     </button>
                 </Card>
