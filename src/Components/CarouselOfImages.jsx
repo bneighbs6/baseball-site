@@ -67,7 +67,7 @@ function CarouselOfImages() {
             <img src={ballOnTee} alt="coach instructing baseball drill" />
           </Carousel.Item>
         </Carousel>
-        <img className="logo" src={logoImage} alt="Neighborly Nine Logo" />
+        <img className="carousel-logo" src={logoImage} alt="Neighborly Nine Logo" />
       </div>
     );
 }
