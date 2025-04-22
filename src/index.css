@@ -67,14 +67,6 @@ code {
   border-radius: 3px;
 }
 
-/* Optional: Add media query for larger screens */
-@media (min-width: 768px) {
-  .uniform-btn {
-      font-size: 20px; /* Increase font size on medium screens */
-      padding: 20px; /* Increase padding on medium screens */
-  }
-}
-
 .uniform-btn {
   width: 100%; /* Make buttons full width */
   padding: 15px; /* Increase padding for larger buttons */
