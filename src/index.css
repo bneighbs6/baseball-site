@@ -172,7 +172,7 @@ code {
 .shop-card {
   margin: 20px;            /* Space between cards */
   flex: 1;                 /* Allow cards to grow equally */
-  max-width: 400px;        /* Set a max width for cards */
+  max-width: 500px;        /* Set a max width for cards */
 }
 
 .shop-card-img {
