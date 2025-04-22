@@ -1,59 +1,57 @@
+/* Base styles for mobile devices */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .App {
-  display: flex; 
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
   font-family: "Roboto Condensed", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 /* Header CSS */
 .header-container {
   background-color: #000;
-  padding: 20px; 
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   text-align: center;
-  height: 400px; /* Set a fixed height for the header */
+  height: 400px; /* Consider using a relative unit for height */
   overflow: hidden; /* Hide overflow to prevent images from spilling out */
 }
 
 .header-logo {
   max-width: 100%; /* Ensures the image doesn't exceed the width of its container */
-  height: auto;    /* Maintains the aspect ratio */
-  width: 400px;    /* Set a specific width for the logo */
+  height: auto; /* Maintains the aspect ratio */
+  width: 400px;
 }
 
 /* Uniform CSS */
-
 .uniform-container {
   display: flex;
+  flex-direction: column; /* Stack cards vertically on mobile */
   justify-content: center; /* Center the cards horizontally */
-  align-items: flex-start; /* Align cards to the top */
-  width: 100%;             /* Take full width of the parent */
-  margin: auto;            /* Center the container itself */
+  align-items: center; /* Center cards */
+  width: 100%; /* Take full width of the parent */
+  margin: auto; /* Center the container itself */
   padding: 20px;
 }
 
 .uniform-card {
   border: #000 3px solid;
   width: 100%; /* Make the card responsive */
-  max-width: 600px; /* Set a max width for larger screens */
-  height: 100%;
+  height: auto; /* Allow height to adjust based on content */
+  margin-bottom: 20px; /* Space between cards */
 }
 
 .uniform-title {
@@ -65,7 +63,7 @@ code {
   background-color: black;
   color: white;
   margin: 0px;
-  padding: 10px; 
+  padding: 10px;
   border-radius: 3px;
 }
 
@@ -170,22 +168,58 @@ code {
 
 /* Shop Page CSS */
 .shop-card {
-  margin: 20px;            /* Space between cards */
-  flex: 1;                 /* Allow cards to grow equally */
-  max-width: 500px;        /* Set a max width for cards */
+  margin: 20px; /* Space between cards */
+  flex: 1; /* Allow cards to grow equally */
+  max-width: 100%; /* Set a max width for cards */
 }
 
 .shop-card-img {
   display: block;
   margin: 20px auto; /* Center the image horizontally */
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 200px; /* Limit the width of the image */
+  max-height: 200px; /* Limit the height of the image */
 }
 
 /* Shop Page Construction Icons */
 .construction-icon {
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  padding: 5px;
+  width: 100px; /* Set a fixed width for icons */
+  height: 100px; /* Set a fixed height for icons */
+  margin: 5px; /* Space around icons */
+  padding: 5px; /* Padding inside icons */
+}
+
+/* Media Queries for larger screens */
+@media (min-width: 768px) {
+  .uniform-container {
+      flex-direction: row; /* Align cards in a row on larger screens */
+      flex-wrap: wrap; /* Allow cards to wrap to the next line */
+      justify-content: space-around; /* Space out cards evenly */
+  }
+
+  .uniform-card {
+      max-width: 600px; /* Set a max width for larger screens */
+      margin: 10px; /* Space between cards */
+  }
+
+  .uniform-btn {
+      font-size: 20px; /* Increase font size on medium screens */
+      padding: 20px; /* Increase padding on medium screens */
+  }
+
+  .header-container {
+      height: 500px; /* Adjust header height for larger screens */
+  }
+
+  .carousel-item img {
+      max-height: 500px; /* Limit the height of the images on larger screens */
+  }
+
+  .shop-card {
+      max-width: 500px; /* Set a max width for cards on larger screens */
+  }
+
+  .shop-card-img {
+      max-width: 300px; /* Limit the width of the image on larger screens */
+      max-height: 300px; /* Limit the height of the image on larger screens */
+  }
 }
