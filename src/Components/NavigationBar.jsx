@@ -1,6 +1,8 @@
 import Container from "react-bootstrap/Container";
 import { Dropdown, Navbar, Nav } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function NavigationBar() {
   // Define breakpoints for mobile and desktop
@@ -13,7 +15,10 @@ function NavigationBar() {
         {isMobile ? (
           // Mobile Navigation
           <Dropdown>
-            <Dropdown.Toggle variant="light">Menu</Dropdown.Toggle>
+            <Dropdown.Toggle variant="light">
+              <FontAwesomeIcon icon={faBars} />
+              {" "}Menu
+            </Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item href="/">Home</Dropdown.Item>
               <Dropdown.Item href="/meet">Meet the Coach</Dropdown.Item>
