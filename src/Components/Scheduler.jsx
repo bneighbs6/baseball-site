@@ -3,11 +3,11 @@ import { Card, Accordion, Row, Col } from "react-bootstrap";
 
 function Scheduler() {
     function handle30MinClick() {
-        window.open("https://appt.link/meet-with-brett-n-57yYGthM/in-person-meeting/", "_blank");
+        window.open("https://appt.link/meet-with-brett-n-57yYGthM/30-min-lesson", "_blank");
     }
 
     function handle60MinClick() {
-        window.open("https://appt.link/meet-with-brett-n-57yYGthM/60-minute-lesson/", "_blank");
+        window.open("https://appt.link/meet-with-brett-n-57yYGthM/60-min-lesson", "_blank");
     }
 
     return (
