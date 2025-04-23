@@ -1,7 +1,10 @@
 import React from "react";
 import { Card } from "react-bootstrap";
+import { useMediaQuery } from "react-responsive";
 
 function HomePage() {
+    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+
     return (
         <div className="uniform-container">
             <h2 className="uniform-title">Welcome to Diamond Development!</h2>
@@ -27,25 +30,27 @@ function HomePage() {
                 </p>
                 <p>Play ball! ⚾️</p>
             </div>
-            <div className="home-page-card-container">
-                <Card className="uniform-card">
-                    <Card.Title className="uniform-title">The New Baseball Strength Program</Card.Title>
-                    <Card.Body>
-                        Be stronger in the box, throw harder in the field or on the mound,
-                        and be better than everyone else with the Baseball Strength
-                        Program. This program is designed to develop the necessary
-                        strength needed to excel in the game of baseball. Choose your
-                        level of experience in the weight room and we will deliver the
-                        best training program available.
-                    </Card.Body>
-                    <Card.Body>
-                        Stay tuned for the Baseball Strength Program Launch Date
-                    </Card.Body>
-                    <button disabled className="uniform-btn-home-card">
-                        Click Here to Get Strong
-                    </button>
-                </Card>
-            </div>
+            {!isMobile && ( // Only show this part if not on mobile
+                <div className="uniform-container">
+                    <Card className="uniform-card">
+                        <Card.Title className="uniform-title">The New Baseball Strength Program</Card.Title>
+                        <Card.Body>
+                            Be stronger in the box, throw harder in the field or on the mound,
+                            and be better than everyone else with the Baseball Strength
+                            Program. This program is designed to develop the necessary
+                            strength needed to excel in the game of baseball. Choose your
+                            level of experience in the weight room and we will deliver the
+                            best training program available.
+                        </Card.Body>
+                        <Card.Body>
+                            Stay tuned for the Baseball Strength Program Launch Date
+                        </Card.Body>
+                        <button disabled className="uniform-btn-home-card">
+                            Click Here to Get Strong
+                        </button>
+                    </Card>
+                </div>
+            )}
         </div>
     );
 }
