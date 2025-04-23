@@ -232,15 +232,16 @@ code {
 /* Shop Page CSS */
 .shop-card {
   margin: 20px; /* Space between cards */
-  flex: 1; /* Allow cards to grow equally */
+  flex: 0 1 600px; /* Allow cards to grow, but set a base width of 600px */
   max-width: 100%; /* Set a max width for cards */
+  min-width: 250px; /* Set a minimum width for cards */
 }
 
 .shop-card-img {
   display: block;
   margin: 20px auto; /* Center the image horizontally */
-  max-width: 200px; /* Limit the width of the image */
-  max-height: 200px; /* Limit the height of the image */
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
 }
 
 /* Shop Page Construction Icons */
