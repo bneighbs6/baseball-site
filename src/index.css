@@ -36,6 +36,53 @@ code {
   width: 400px;
 }
 
+/* Navigation Bar Dropdown CSS */
+.nav-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  padding: 10px; /* Add some padding around the container */
+  width: 100%; /* Full width */
+}
+
+/* Ensure the Navbar takes full width on mobile */
+.navbar {
+  width: 100%; /* Full width for the navbar */
+}
+
+/* Dropdown Toggle Button */
+.dropdown-toggle {
+  background-color: black; /* Bootstrap primary color */
+  color: white; /* Text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  background-color: #ffffff; /* White background for dropdown */
+  border: 1px solid #dee2e6; /* Border color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Dropdown Items */
+.dropdown-item {
+  padding: 10px 20px; /* Padding for dropdown items */
+  color: #333; /* Text color */
+}
+
+/* Dropdown Item Hover Effect */
+.dropdown-item:hover {
+  background-color: #f1f1f1; /* Light gray background on hover */
+  color: red; /* Change text color on hover */
+}
+
+/* Button Hover Effect */
+.uniform-btn-nav:hover {
+  text-decoration: underline; /* Underline text on hover */
+}
+
 /* Uniform CSS */
 .uniform-container {
   display: flex;
@@ -79,10 +126,6 @@ code {
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.uniform-btn:hover {
-  background-color: #323232;
-}
-
 .uniform-btn:disabled {
   background-color: black; /* Keep the same background color */
   color: white; /* Keep the same text color */
@@ -116,8 +159,9 @@ code {
   transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
-.uniform-btn-contact-submit:hover, .uniform-btn-home-card:hover, .uniform-btn-nav:hover, .uniform-btn-lesson:hover {
+.uniform-btn-contact-submit:hover, .uniform-btn-home-card:hover, .uniform-btn-nav:hover, .uniform-btn-lesson:hover, .uniform-btn:hover, .dropdown-toggle:hover {
   background-color: #323232; /* Darker shade on hover */
+  color: white; 
 }
 
 .uniform-btn-contact-submit:disabled, .uniform-btn-home-card:disabled {
