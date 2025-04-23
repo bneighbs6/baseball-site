@@ -14,11 +14,10 @@ function HomePage() {
             <>
               <p>Click on the menu to get started.</p>
               <p>
-                Welcome to Diamond Development! We're excited to help you
-                improve your baseball skills. Our individual and group lessons
-                are tailored to fit your needs, whether you're a beginner or
-                looking to refine your techniques. Join us for a fun and
-                engaging experience!
+                We're excited to help you improve your baseball skills. Our
+                individual and group lessons are tailored to fit your needs,
+                whether you're a beginner or looking to refine your skills.
+                Join us to improve your overall performance on the field.
               </p>
             </>
           ) : (
