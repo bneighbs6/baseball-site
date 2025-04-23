@@ -113,7 +113,7 @@ code {
 
 .uniform-title {
   text-align: center; /* Center the title */
-  margin-bottom: 20px; /* Add some space below the title */
+  margin: 20px 10px; /* Add some space below the title */
 }
 
 .uniform-title-pricing {
@@ -269,6 +269,10 @@ code {
       justify-content: space-around; /* Space out cards evenly */
   }
 
+  .uniform-title {
+    color: red;
+  }
+
   .uniform-card {
       max-width: 600px; /* Set a max width for larger screens */
       margin: 10px; /* Space between cards */
@@ -294,6 +298,10 @@ code {
   .shop-card-img {
       max-width: 300px; /* Limit the width of the image on larger screens */
       max-height: 300px; /* Limit the height of the image on larger screens */
+  }
+
+  footer {
+    color: red;
   }
 }
 
