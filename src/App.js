@@ -6,7 +6,7 @@ import ShopPage from "./Components/Pages/ShopPage";
 import Layout from "./Layout/layout";
 import MeetTheCoach from "./Components/MeetTheCoach";
 import ContactForm from "./Components/ContactForm";
-import CalendlyForm from "./Components/CalendlyForm";
+import Scheduler from "./Components/Scheduler";
 import Footer from "./Components/Footer";
 import HomePage from "./Components/Pages/HomePage";
 
@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/meet" element={<MeetTheCoach />} />
-            <Route path="/schedule" element={<CalendlyForm />} />
+            <Route path="/schedule" element={<Scheduler />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/shop" element={<ShopPage />} />
           </Routes>

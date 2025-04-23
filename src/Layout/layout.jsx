@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import NavigationBar from "../Components/NavigationBar";
 import MeetTheCoach from "../Components/MeetTheCoach";
-import CalendlyForm from "../Components/CalendlyForm"
+import Scheduler from "../Components/Scheduler"
 import ContactForm from "../Components/ContactForm";
 import Footer from "../Components/Footer";
 
@@ -14,7 +14,7 @@ function Layout() {
           <MeetTheCoach />
         </div>
         <div id="calendly">
-          <CalendlyForm />
+          <Scheduler />
         </div>
         <div id="contact">
           <ContactForm />

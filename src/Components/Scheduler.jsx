@@ -1,13 +1,13 @@
 import React from "react";
 import { Card, Accordion, Row, Col } from "react-bootstrap";
 
-function CalendlyForm() {
+function Scheduler() {
     function handle30MinClick() {
-        window.open("https://calendly.com/bneighbs6/baseball-lesson?text_color=000000&primary_color=00e6e6", "_blank");
+        window.open("https://appt.link/meet-with-brett-n-57yYGthM/in-person-meeting/", "_blank");
     }
 
     function handle60MinClick() {
-        window.open("https://calendly.com/bneighbs6/60-min-baseball-lesson?text_color=000000&primary_color=00e6e6", "_blank");
+        window.open("https://appt.link/meet-with-brett-n-57yYGthM/60-minute-lesson/", "_blank");
     }
 
     return (
@@ -54,4 +54,4 @@ function CalendlyForm() {
     );
 }
 
-export default CalendlyForm;
+export default Scheduler;
