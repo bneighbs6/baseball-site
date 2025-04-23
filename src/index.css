@@ -244,12 +244,21 @@ code {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Shop Page Construction Icons */
+/* Font Awesome Icons */
 .construction-icon {
   width: 100px; /* Set a fixed width for icons */
   height: 100px; /* Set a fixed height for icons */
   margin: 5px; /* Space around icons */
   padding: 5px; /* Padding inside icons */
+  color: #323232;
+}
+
+.email-icon {
+  width: 50px; /* Set a fixed width for icons */
+  height: 50px; /* Set a fixed height for icons */
+  margin: 2px; /* Space around icons */
+  padding: 2px; /* Padding inside icons */
+  color: #323232;
 }
 
 /* Media Queries for larger screens */
