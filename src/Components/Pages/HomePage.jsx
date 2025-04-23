@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
 
 function HomePage() {
-    const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+    const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
 
     return (
       <div className="uniform-container">
