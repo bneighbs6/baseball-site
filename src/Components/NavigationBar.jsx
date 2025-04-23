@@ -4,7 +4,8 @@ import { useMediaQuery } from "react-responsive";
 
 function NavigationBar() {
   // Define breakpoints for mobile and desktop
-  const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
+  console.log(isMobile);
 
   return (
     <Navbar className="navbar">
