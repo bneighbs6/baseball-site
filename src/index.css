@@ -129,7 +129,7 @@ code {
   text-decoration: line-through;
 }
 
-.uniform-btn-contact-submit, .uniform-btn-home-card, .uniform-btn-nav, .uniform-btn-lesson {
+.uniform-btn-contact-submit, .uniform-btn-home-card, .uniform-btn-nav {
   background-color: black;
   color: white;
   border: none;
