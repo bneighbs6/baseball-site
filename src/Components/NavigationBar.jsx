@@ -7,7 +7,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 function NavigationBar() {
   // Define breakpoints for mobile and desktop
   const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
-  console.log(isMobile);
+  console.log("Mobile device is " + isMobile);
 
   return (
     <Navbar className="navbar">
