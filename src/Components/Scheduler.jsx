@@ -26,18 +26,65 @@ function Scheduler() {
                 <Accordion>
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>One Athlete</Accordion.Header>
-                    <Accordion.Body>30 Min Lesson = $60</Accordion.Body>
-                    <Accordion.Body>60 Min Lesson = $100</Accordion.Body>
+                    <Accordion.Body>
+                      <button
+                        onClick={handle30MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        30 Minute Lesson = $60
+                      </button>
+                    </Accordion.Body>
+                    <Accordion.Body>
+                      {" "}
+                      <button
+                        onClick={handle60MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        60 Minute Lesson = $100
+                      </button>
+                    </Accordion.Body>
                   </Accordion.Item>
                   <Accordion.Item eventKey="1">
                     <Accordion.Header>Two Athletes</Accordion.Header>
-                    <Accordion.Body>30 Min Lesson = $100</Accordion.Body>
-                    <Accordion.Body>60 Min Lesson = $160</Accordion.Body>
+                    <Accordion.Body>
+                      {" "}
+                      <button
+                        onClick={handle30MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        30 Minute Lesson = $100
+                      </button>
+                    </Accordion.Body>
+                    <Accordion.Body>
+                      {" "}
+                      <button
+                        onClick={handle60MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        60 Minute Lesson = $160
+                      </button>
+                    </Accordion.Body>
                   </Accordion.Item>
                   <Accordion.Item eventKey="2">
                     <Accordion.Header>Three Athletes</Accordion.Header>
-                    <Accordion.Body>30 Min Lesson = $120</Accordion.Body>
-                    <Accordion.Body>60 Min Lesson = $180</Accordion.Body>
+                    <Accordion.Body>
+                      {" "}
+                      <button
+                        onClick={handle30MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        30 Minute Lesson = $120
+                      </button>
+                    </Accordion.Body>
+                    <Accordion.Body>
+                      {" "}
+                      <button
+                        onClick={handle60MinClick}
+                        className="uniform-btn-lesson"
+                      >
+                        60 Minute Lesson = $180
+                      </button>
+                    </Accordion.Body>
                   </Accordion.Item>
                 </Accordion>
               </Col>
