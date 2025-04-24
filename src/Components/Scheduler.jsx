@@ -21,8 +21,8 @@ function Scheduler() {
               you would like to schedule.
             </Card.Text>
             <Row className="mb-3">
-              <Col xs={12} md={6}>
-                <h3 className="uniform-title-pricing">Pricing</h3>
+              <Col>
+                <h3>Pricing</h3>
                 <Accordion>
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>One Athlete</Accordion.Header>
@@ -41,7 +41,7 @@ function Scheduler() {
                   </Accordion.Item>
                 </Accordion>
               </Col>
-              <Col
+              {/* <Col
                 xs={12}
                 md={6}
                 className="d-flex flex-column align-items-center"
@@ -58,7 +58,7 @@ function Scheduler() {
                 >
                   60 Minute Lesson
                 </button>
-              </Col>
+              </Col> */}
             </Row>
           </Card.Body>
         </Card>
