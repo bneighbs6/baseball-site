@@ -22,7 +22,7 @@ function Scheduler() {
             </Card.Text>
             <Row className="mb-3">
               <Col>
-                <h3>Pricing</h3>
+                <h3 className="uniform-title-pricing">Pricing</h3>
                 <Accordion>
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>One Athlete</Accordion.Header>
