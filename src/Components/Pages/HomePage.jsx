@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 import { useMediaQuery } from "react-responsive";
+import Widget from "../Widget";
 
 function HomePage() {
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    const [buttonPopup, setButtonPopup] = useState(false);
+    const [timedPopup, setTimedPopup] = useState(false);
+
+    useEffect(() => {
+      setTimeout(() => {
+        setTimedPopup(true);
+      }, 3000);
+    }, []);
 
     return (
       <div className="uniform-container">
@@ -16,13 +25,16 @@ function HomePage() {
               <p>
                 We're excited to help you improve your baseball skills. Our
                 individual and group lessons are tailored to fit your needs,
-                whether you're a beginner or looking to refine your skills.
-                Join us to improve your overall performance on the field.
+                whether you're a beginner or looking to refine your skills. Join
+                us to improve your overall performance on the field.
               </p>
             </>
           ) : (
             // Desktop content
             <>
+              <button className="open" onClick={() => setButtonPopup(true)}>Open</button>
+              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>My normal popup</Widget>
+              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>MY TIMED POPUP</Widget>
               <p>
                 We're thrilled to have you here! At Diamond Development, we
                 believe that every player has the potential to shine on the
