@@ -21,6 +21,15 @@ function HomePage() {
           {isMobile ? (
             // Mobile content
             <>
+              <button className="open" onClick={() => setButtonPopup(true)}>
+                Open Popup
+              </button>
+              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+                My normal popup
+              </Widget>
+              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+                MY TIMED POPUP
+              </Widget>
               <p>Click on the menu to get started.</p>
               <p>
                 We're excited to help you improve your baseball skills. Our
@@ -32,9 +41,15 @@ function HomePage() {
           ) : (
             // Desktop content
             <>
-              <button className="open" onClick={() => setButtonPopup(true)}>Open</button>
-              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>My normal popup</Widget>
-              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>MY TIMED POPUP</Widget>
+              <button className="open" onClick={() => setButtonPopup(true)}>
+                Open Popup
+              </button>
+              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+                My normal popup
+              </Widget>
+              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+                MY TIMED POPUP
+              </Widget>
               <p>
                 We're thrilled to have you here! At Diamond Development, we
                 believe that every player has the potential to shine on the

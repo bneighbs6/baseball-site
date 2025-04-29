@@ -9,7 +9,7 @@ function Widget(props) {
         { props.children }
       </div>
     </div>
-  ) : "Trigger it to be true"
+  ) : ""
 }
 
 export default Widget;
