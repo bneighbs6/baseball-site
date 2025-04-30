@@ -4,10 +4,14 @@ import { useMediaQuery } from "react-responsive";
 import Widget from "../Widget";
 
 function HomePage() {
+  // Tracks if user is on a mobile device
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    // Sets the buttonPopup trigger === false
     const [buttonPopup, setButtonPopup] = useState(false);
+    // Sets the timedPopup trigger === false
     const [timedPopup, setTimedPopup] = useState(false);
 
+    // Displays a popup widget after 3 seconds
     useEffect(() => {
       setTimeout(() => {
         setTimedPopup(true);
@@ -18,15 +22,19 @@ function HomePage() {
       <div className="uniform-container">
         <h2 className="uniform-title">Welcome to Diamond Development!</h2>
         <div className="home-page-body">
+          {/* If isMobile === true, display Mobile Content, otherwise display Desktop Content */}
           {isMobile ? (
             // Mobile content
             <>
+              {/* When clicked, buttonPopup will be set to TRUE */}
               <button className="open" onClick={() => setButtonPopup(true)}>
                 Open Popup
               </button>
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
               <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
                 My normal popup
               </Widget>
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
               <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
                 MY TIMED POPUP
               </Widget>
@@ -39,14 +47,18 @@ function HomePage() {
               </p>
             </>
           ) : (
+            // This content is displayed if user is on a desktop
             // Desktop content
             <>
+              {/* When clicked, buttonPopup will be set to TRUE */}
               <button className="open" onClick={() => setButtonPopup(true)}>
                 Open Popup
               </button>
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
               <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
                 My normal popup
               </Widget>
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
               <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
                 MY TIMED POPUP
               </Widget>
