@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import Widget from "../Widget";
 
@@ -27,11 +28,11 @@ function HomePage() {
             // Mobile content
             <>
               {/* When clicked, buttonPopup will be set to TRUE */}
-              <button className="open" onClick={() => setButtonPopup(true)}>
+              {/* <button className="open" onClick={() => setButtonPopup(true)}>
                 Open Popup
-              </button>
+              </button> */}
               {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
-              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+              {/* <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
                 <h3>Sign up for Email Alerts</h3>
                 <p>
                   Don't miss out on all the exciting new opportunities happening
@@ -40,9 +41,9 @@ function HomePage() {
                 </p>
                 <p>All Things Baseball</p>
                 <button>Sign Up Now.</button>
-              </Widget>
+              </Widget> */}
               {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
-              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+              {/* <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
                 <h3>Have you heard?</h3>
                 <p>
                   Our new Strength and Conditioning Program designed
@@ -59,18 +60,18 @@ function HomePage() {
                 individual and group lessons are tailored to fit your needs,
                 whether you're a beginner or looking to refine your skills. Join
                 us to improve your overall performance on the field.
-              </p>
+              </p> */}
             </>
           ) : (
             // This content is displayed if user is on a desktop
             // Desktop content
             <>
               {/* When clicked, buttonPopup will be set to TRUE */}
-              <button className="open" onClick={() => setButtonPopup(true)}>
+              {/* <button className="open" onClick={() => setButtonPopup(true)}>
                 Open Popup
-              </button>
+              </button> */}
               {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
-              <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+              {/* <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
                 <div className="uniform-container">
                   <div className="uniform-card"></div>
                   <h3>Sign up for Email Alerts</h3>
@@ -82,9 +83,9 @@ function HomePage() {
                   <p>All Things Baseball</p>
                   <button className="uniform-btn-lesson">Sign Up Now.</button>
                 </div>
-              </Widget>
+              </Widget> */}
               {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
-              <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+              {/* <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
                 <div className="uniform-container">
                   <div className="uniform-card">
                     <h3>Have you heard?</h3>
@@ -98,7 +99,7 @@ function HomePage() {
                     <button className="uniform-btn-lesson">Sign Up Now.</button>
                   </div>
                 </div>
-              </Widget>
+              </Widget> */}
               <p>
                 We're thrilled to have you here! At Diamond Development, we
                 believe that every player has the potential to shine on the
@@ -140,9 +141,14 @@ function HomePage() {
               <Card.Body>
                 Stay tuned for the Baseball Strength Program Launch Date
               </Card.Body>
-              <button disabled className="uniform-btn-home-card">
-                Click Here to Get Strong
-              </button>
+              <Link
+                to="https://diamonddevelopment.gumroad.com/"
+                target="_blank"
+              >
+                <button className="uniform-btn-home-card">
+                  Click Here to Get Strong
+                </button>
+              </Link>
             </Card>
           </div>
         )}
