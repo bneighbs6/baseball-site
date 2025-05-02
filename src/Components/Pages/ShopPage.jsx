@@ -48,11 +48,8 @@ function ShopPage() {
                 Get ready to elevate your game with our CSCS Tested & Proven
                 Baseball Strength Program! Designed by experts, this program
                 focuses on building strength, speed, and agility to help you
-                perform at your best on the field. While this program is
-                currently unavailable, stay tuned for its launch—your
-                opportunity to transform your training is just around the
-                corner! Sign up for updates and be the first to know when it
-                becomes available!
+                perform at your best on the field. The program is now
+                available—click the button below to get started
               </Card.Text>
               <Link to="https://diamonddevelopment.gumroad.com" target="_blank">
                 <button className="uniform-btn">
