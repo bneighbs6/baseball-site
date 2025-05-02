@@ -9,6 +9,7 @@ import ContactForm from "./Components/ContactForm";
 import Scheduler from "./Components/Scheduler";
 import Footer from "./Components/Footer";
 import HomePage from "./Components/Pages/HomePage";
+// import StrengthPage from "./Components/Pages/StrengthPage";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/schedule" element={<Scheduler />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/shop" element={<ShopPage />} />
+            {/* <Route path="strength" element={<StrengthPage />} /> */}
           </Routes>
         </div>
         <Footer />

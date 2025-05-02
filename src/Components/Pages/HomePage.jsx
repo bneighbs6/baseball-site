@@ -1,28 +1,105 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+import Widget from "../Widget";
 
 function HomePage() {
+  // Tracks if user is on a mobile device
     const isMobile = useMediaQuery({ query: '(max-width: 768px)' });
+    // Sets the buttonPopup trigger === false
+    const [buttonPopup, setButtonPopup] = useState(false);
+    // Sets the timedPopup trigger === false
+    const [timedPopup, setTimedPopup] = useState(false);
+
+    // Displays a popup widget after 3 seconds
+    useEffect(() => {
+      setTimeout(() => {
+        setTimedPopup(true);
+      }, 3000);
+    }, []);
 
     return (
       <div className="uniform-container">
         <h2 className="uniform-title">Welcome to Diamond Development!</h2>
         <div className="home-page-body">
+          {/* If isMobile === true, display Mobile Content, otherwise display Desktop Content */}
           {isMobile ? (
             // Mobile content
             <>
+              {/* When clicked, buttonPopup will be set to TRUE */}
+              {/* <button className="open" onClick={() => setButtonPopup(true)}>
+                Open Popup
+              </button> */}
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
+              {/* <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <h3>Sign up for Email Alerts</h3>
+                <p>
+                  Don't miss out on all the exciting new opportunities happening
+                  at Diamond Development. Click the "Sign Up Now" button to
+                  always be in the loop.
+                </p>
+                <p>All Things Baseball</p>
+                <button>Sign Up Now.</button>
+              </Widget> */}
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
+              {/* <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+                <h3>Have you heard?</h3>
+                <p>
+                  Our new Strength and Conditioning Program designed
+                  specifically for baseball sports performance is coming soon.
+                  Click the button below to sign up for an email alert once it
+                  arrives and receive a coupon for 50% OFF!
+                </p>
+                <p>Don't miss out on this exciting opportunity.</p>
+                <button>Sign Up Now.</button>
+              </Widget>
               <p>Click on the menu to get started.</p>
               <p>
                 We're excited to help you improve your baseball skills. Our
                 individual and group lessons are tailored to fit your needs,
-                whether you're a beginner or looking to refine your skills.
-                Join us to improve your overall performance on the field.
-              </p>
+                whether you're a beginner or looking to refine your skills. Join
+                us to improve your overall performance on the field.
+              </p> */}
             </>
           ) : (
+            // This content is displayed if user is on a desktop
             // Desktop content
             <>
+              {/* When clicked, buttonPopup will be set to TRUE */}
+              {/* <button className="open" onClick={() => setButtonPopup(true)}>
+                Open Popup
+              </button> */}
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
+              {/* <Widget trigger={buttonPopup} setTrigger={setButtonPopup}>
+                <div className="uniform-container">
+                  <div className="uniform-card"></div>
+                  <h3>Sign up for Email Alerts</h3>
+                  <p>
+                    Don't miss out on all the exciting new opportunities
+                    happening at Diamond Development. Click the "Sign Up Now"
+                    button to always be in the loop.
+                  </p>
+                  <p>All Things Baseball</p>
+                  <button className="uniform-btn-lesson">Sign Up Now.</button>
+                </div>
+              </Widget> */}
+              {/* you can access these props in Widget component using "props.trigger" or "props.setTrigger" */}
+              {/* <Widget trigger={timedPopup} setTrigger={setTimedPopup}>
+                <div className="uniform-container">
+                  <div className="uniform-card">
+                    <h3>Have you heard?</h3>
+                    <p>
+                      Our new Strength and Conditioning Program designed
+                      specifically for baseball sports performance is coming
+                      soon. Click the button below to sign up for an email alert
+                      once it arrives and receive a coupon for 50% OFF!
+                    </p>
+                    <p>Don't miss out on this exciting opportunity.</p>
+                    <button className="uniform-btn-lesson">Sign Up Now.</button>
+                  </div>
+                </div>
+              </Widget> */}
               <p>
                 We're thrilled to have you here! At Diamond Development, we
                 believe that every player has the potential to shine on the
@@ -64,9 +141,14 @@ function HomePage() {
               <Card.Body>
                 Stay tuned for the Baseball Strength Program Launch Date
               </Card.Body>
-              <button disabled className="uniform-btn-home-card">
-                Click Here to Get Strong
-              </button>
+              <Link
+                to="https://diamonddevelopment.gumroad.com/"
+                target="_blank"
+              >
+                <button className="uniform-btn-home-card">
+                  Click Here to Get Strong
+                </button>
+              </Link>
             </Card>
           </div>
         )}
