@@ -141,14 +141,9 @@ function HomePage() {
               <Card.Body>
                 Stay tuned for the Baseball Strength Program Launch Date
               </Card.Body>
-              <Link
-                to="https://diamonddevelopment.gumroad.com/"
-                target="_blank"
-              >
-                <button className="uniform-btn-home-card">
-                  Click Here to Get Strong
-                </button>
-              </Link>
+              <button disabled className="uniform-btn-home-card">
+                Click Here to Get Strong
+              </button>
             </Card>
           </div>
         )}
