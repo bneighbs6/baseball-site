@@ -7,7 +7,7 @@ function ShopPage() {
       <div className="uniform-container">
         <div className="shop-card">
           <Card className="text-center uniform-card">
-            <Card.Header>Diamond Dev Apparel</Card.Header>
+            <Card.Header style={{fontWeight: "bold"}}>Diamond Dev Apparel</Card.Header>
             <Card.Img
               className="shop-card-img"
               src="../media/DiamondDevTransparent.png"
@@ -37,7 +37,7 @@ function ShopPage() {
         </div>
         <div className="shop-card">
           <Card className="text-center uniform-card">
-            <Card.Header>Strength</Card.Header>
+            <Card.Header style={{fontWeight: "bold"}}>Strength & Conditioning</Card.Header>
             <Card.Img
               className="shop-card-img"
               src="../media/DiamondDevTransparent.png"
