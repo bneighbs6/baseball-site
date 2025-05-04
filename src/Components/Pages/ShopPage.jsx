@@ -43,7 +43,7 @@ function ShopPage() {
               src="../media/DiamondDevTransparent.png"
             />
             <Card.Body>
-              <Card.Title>CSCS Tested & Proven Programs</Card.Title>
+              <Card.Title>Certified Strength & Conditioning Specialist (CSCS) Tested & Proven Programs</Card.Title>
               <Card.Text>
               Get ready to elevate your game with our CSCS Tested & Proven
                 Baseball Strength Program! Designed by experts, this program
@@ -51,8 +51,7 @@ function ShopPage() {
                 perform at your best on the field. While this program is
                 currently unavailable, stay tuned for its launch—your
                 opportunity to transform your training is just around the
-                corner! Sign up for updates and be the first to know when it
-                becomes available!
+                corner!
               </Card.Text>
               <Link to="https://diamonddevelopment.gumroad.com" target="_blank">
                 <button disabled className="uniform-btn">
