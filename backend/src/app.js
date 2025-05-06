@@ -10,7 +10,14 @@ const sayHello = (req, res) => {
     res.send(content);
 }
 
+const saySomething = (req, res) => {
+    const greeting = req.params.greeting;
+    const content = `${greeting}`;
+    res.send(content);
+}
+
   app.use(morgan("dev"));
   app.get("/hello", sayHello);
+  app.get('/say/:greeting', saySomething);
 
 module.exports = app; 
