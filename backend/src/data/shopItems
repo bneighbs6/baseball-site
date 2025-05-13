@@ -1,0 +1,17 @@
+module.exports = [
+    {
+        id: 1,
+        name: "The Veteran Lift",
+        price: 34.99
+    },
+    {
+        id: 2,
+        name: "The Prospect Lift",
+        price: 34.99
+    },
+    {
+        id: 3, 
+        name: "The Rookie Lift",
+        price: 34.99
+    }
+]
