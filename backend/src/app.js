@@ -31,7 +31,7 @@ const saySomething = (req, res) => {
     res.json({ data: shopItems });
   });
 
-  // Stripe payment route
+  // Stripe Payment Intent Route
 app.post('/create-payment-intent', async (req, res) => {
   const { amount, currency } = req.body;
 
@@ -50,6 +50,24 @@ app.post('/create-payment-intent', async (req, res) => {
     console.error("Stripe error:", err);
     res.status(500).json({ error: err.message });
   }
+});
+
+// Stripe Checkout Session Route
+app.post('/create-checkout-session', async (req, res) => {
+  const { cartItems } = req.body;
+
+  const session = await stripe.checkout.sessions.create({
+    payment_method_types: ['card'],
+    line_items: cartItems.map(item => ({
+      price: item.stripePriceId, // pre-defined in Stripe
+      quantity: item.quantity,
+    })),
+    mode: 'payment',
+    success_url: 'https://yourdomain.com/success',
+    cancel_url: 'https://yourdomain.com/cancel',
+  });
+
+  res.json({ url: session.url });
 });
 
   // Variable to hold the next ID
