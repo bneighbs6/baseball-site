@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 const stripePromise = loadStripe('pk_test_51ROPbZFgxce1MaOEDG6CCjV0QhQ5OOeK6sNwGumIB4ai4RE6x0A3uemfdQRxWX4hbpyGRstbzeTzT1e407zUdaSV00xLyNfzlE'); // replace with your Stripe PUBLISHABLE key
 
 function App() {
-  const [clientSecret, setClientSecret] = useState("");
+  const [clientSecret, setClientSecret] = useState(""); // Create useState instance. Prop will be passed to ShopPage.jsx
 
   // Only runs once because of the empty dependency array
   // This useEffect is used to POST a new payment intent to my backend server storing my stripe payments
