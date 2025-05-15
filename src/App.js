@@ -32,12 +32,14 @@ function App() {
       .then((data) => setClientSecret(data.clientSecret)); // then set clientSecret === data. When this updates, the options object below becomes valid, and Stripe Elements can mount
   }, []);
 
+  // Options object for Stripe Payments
   const options = {
-    clientSecret,
+    clientSecret, // The client secret returned from your server when creating a PaymentIntent
     appearance: {
-      theme: "stripe",
+      theme: "stripe", // Defines the visual theme for the Stripe Elements
     },
   };
+  
 
   return (
     <Router>
@@ -59,7 +61,7 @@ function App() {
               element={
                 clientSecret ? (
                   <Elements stripe={stripePromise} options={options}>
-                    <ShopPage />
+                    <ShopPage clientSecret={clientSecret} />
                   </Elements>
                 ) : (
                   <p>Loading checkout...</p>

@@ -2,57 +2,56 @@
 import React, { useEffect, useState } from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { useStripe, useElements, PaymentElement } from "@stripe/react-stripe-js";
+import {
+  useStripe,
+  useElements,
+  PaymentElement,
+} from "@stripe/react-stripe-js";
 
-function ShopPage() {
-  const stripe = useStripe();
-  const elements = useElements();
-  const [clientSecret, setClientSecret] = useState("");
-  const [message, setMessage] = useState(null);
-  const [isProcessing, setIsProcessing] = useState(false);
+function ShopPage({ clientSecret }) {
+  const stripe = useStripe(); // Initiate instance of useStripe() and assign to a variable
+  const elements = useElements(); // Initialize instance of useElements() and assign to a variable
+  const [message, setMessage] = useState(null); // set message to have an initial state of null
+  const [isProcessing, setIsProcessing] = useState(false); // set isProcessing to have an initial state of false
 
-  // Fetch client secret when component mounts
-  useEffect(() => {
-    fetch("http://localhost:3001/create-payment-intent", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ amount: 2000, currency: "usd" }) // $20.00 USD
-    })
-      .then(res => res.json())
-      .then(data => {
-        setClientSecret(data.clientSecret);
-      })
-      .catch(err => {
-        console.error("Error fetching clientSecret:", err);
-      });
-  }, []);
-
+  // handleSubmit will run once the user submits the form (<PaymentElement />)
   const handleSubmit = async (e) => {
+    // Stop the form from performing its default submit behavior (page reload)
     e.preventDefault();
 
+    // Prevent submission until Stripe and Elements are fully initialized
     if (!stripe || !elements) return;
 
+    // Indicate that payment is currently being processed
     setIsProcessing(true);
 
+    // Confirm the payment with the current Payment Element setup
+    // This sends the payment details to Stripe and attempts to complete the payment
     const { error, paymentIntent } = await stripe.confirmPayment({
-      elements,
+      elements, // Pass in the Stripe Elements context that holds the user's payment info
       confirmParams: {
-        return_url: window.location.href,
+        // Where Stripe should redirect the user after authentication (e.g. 3D Secure)
+        return_url: window.location.href, // This can also be a dedicated success page
       },
-      redirect: "if_required",
+      redirect: "if_required", // Only redirect if extra authentication is needed (like 3D Secure)
     });
 
     if (error) {
+      // If there was an error during payment confirmation, display the error message
       setMessage(error.message);
     } else if (paymentIntent && paymentIntent.status === "succeeded") {
+      // If paymentIntent exists and its status is 'succeeded', show a success message
       setMessage("✅ Payment succeeded!");
     } else {
+      // If paymentIntent exists but status is not 'succeeded', show a generic failure message
       setMessage("⚠️ Payment was not successful.");
     }
 
+    // Stop the loading state after processing is done
     setIsProcessing(false);
   };
 
+  // Returned to the user
   return (
     <div className="uniform-container">
       {/* Existing Shop Cards */}
@@ -68,16 +67,11 @@ function ShopPage() {
           <Card.Body>
             <Card.Title>Shop Our New Styles Now</Card.Title>
             <Card.Text>
-              Discover the perfect blend of style and comfort with our
-              exclusive Diamond Dev Apparel collection!
+              Discover the perfect blend of style and comfort with our exclusive
+              Diamond Dev Apparel collection!
             </Card.Text>
-            <Link
-              to="https://diamond-dev-apparel.printify.me/"
-              target="_blank"
-            >
-              <button className="uniform-btn">
-                Diamond Dev Apparel Shop
-              </button>
+            <Link to="https://diamond-dev-apparel.printify.me/" target="_blank">
+              <button className="uniform-btn">Diamond Dev Apparel Shop</button>
             </Link>
           </Card.Body>
           <Card.Footer className="text-muted">Shop Now</Card.Footer>
@@ -147,4 +141,3 @@ function ShopPage() {
 }
 
 export default ShopPage;
-
