@@ -1,129 +1,76 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import { Card } from "react-bootstrap";
+import strengthProducts from "../../data/strengthProducts";
 
 function ShopPage() {
-  const [cart, setCart] = useState([]);
-  const [checkingOut, setCheckingOut] = useState(false);
-  const [error, setError] = useState(null);
-
-  const products = [
-    {
-      id: 1,
-      name: "Diamond Dev T-Shirt",
-      price: 2500, // $25.00
-      image: "../media/DiamondDevTransparent.png",
-    },
-    {
-      id: 2,
-      name: "Strength Program",
-      price: 4000,
-      image: "../media/DiamondDevTransparent.png",
-    },
-  ];
-
-  const addToCart = (product) => {
-    const exists = cart.find((item) => item.id === product.id);
-    if (exists) {
-      setCart(
-        cart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
-    }
-  };
-
-  const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
-  };
-
-  const getTotal = () =>
-    cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-
-  const handleCheckout = async () => {
-    setCheckingOut(true);
-    setError(null);
-
-    try {
-      const response = await fetch("http://localhost:8000/create-checkout-session", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ cartItems: cart }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Something went wrong during checkout.");
-      }
-
-      window.location.href = data.url;
-    } catch (err) {
-      console.error("Checkout error:", err);
-      setError(err.message);
-    } finally {
-      setCheckingOut(false);
-    }
-  };
+  // const [cart, setCart] = useState([]);
+  // const [checkingOut, setCheckingOut] = useState(false);
+  // const [error, setError] = useState(null);
 
   return (
-    <div className="uniform-container">
-      {/* Product Cards */}
-      {products.map((product) => (
-        <div key={product.id} className="shop-card">
-          <Card className="text-center uniform-card">
-            <Card.Header style={{ fontWeight: "bold" }}>{product.name}</Card.Header>
-            <Card.Img className="shop-card-img" src={product.image} />
-            <Card.Body>
-              <Card.Title>{product.name}</Card.Title>
-              <Card.Text>${(product.price / 100).toFixed(2)}</Card.Text>
-              <button className="uniform-btn" onClick={() => addToCart(product)}>
-                Add to Cart
-              </button>
-            </Card.Body>
-            <Card.Footer className="text-muted">Available Now</Card.Footer>
-          </Card>
-        </div>
-      ))}
+<div className="uniform-container">
+  
+  {/* This will be what determines what message and stripe link each shop card will have */}
+  {strengthProducts.map((product) => {
+    // Define Stripe URL Link based on product name
+    let stripeLink = "";
+    let message = "";
+    if (product.name === "The Rookie Lift") {
+      stripeLink = "https://buy.stripe.com/4gMeVc38C3721A08lkfEk02";
+      message="A 4-Week, 2-Day Per Week Strength & Conditioning Program made for players new to the weight room. The Rookie Lift is your no-pressure introduction to proper training—focused on building foundational strength, movement quality, and confidence. Designed by ballplayers who’ve been in your cleats, it’s the perfect starting point for turning reps into results."
+    } else if (product.name === "The Prospect Lift") {
+      stripeLink = "https://buy.stripe.com/5kQfZg38CfTO3I8eJIfEk01";
+      message = "A 4-Week, 3-Day Per Week Strength & Conditioning Program designed for players who’ve gotten a taste of training—and are hungry for more. The Prospect Lift bridges the gap between raw potential and refined performance. Built for ballplayers ready to level up their strength, speed, and explosiveness, this program takes what you’ve learned and pushes it to the next phase."
+    } else if (product.name === "The Veteran Lift") {
+      stripeLink = "https://buy.stripe.com/14k8wx5IifMidRSbII";
+      message =
+        "A 4-Week, 4-Day Per Week Strength & Conditioning Program built by ballplayers, for ballplayers. This one’s for the grinders. The dirtbags. The seasoned vets who know that baseball strength doesn’t just come from swings and throws—it’s built in the weight room.";
+    }
 
-      {/* Cart Summary */}
-      <div className="shop-card">
+    return (
+      <div key={product.id} className="shop-card">
         <Card className="text-center uniform-card">
-          <Card.Header style={{ fontWeight: "bold" }}>Your Cart</Card.Header>
+          <Card.Header style={{ fontWeight: "bold" }}>{product.name}</Card.Header>
+          <Card.Img className="shop-card-img" src={product.image} />
           <Card.Body>
-            {cart.length === 0 ? (
-              <p>Your cart is empty.</p>
-            ) : (
-              <>
-                <ul style={{ listStyle: "none", padding: 0 }}>
-                  {cart.map((item) => (
-                    <li key={item.id}>
-                      {item.name} × {item.quantity} = $
-                      {((item.price * item.quantity) / 100).toFixed(2)}
-                      <button
-                        style={{ marginLeft: 8 }}
-                        onClick={() => removeFromCart(item.id)}
-                      >
-                        ❌
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-                <h5>Total: ${(getTotal() / 100).toFixed(2)}</h5>
-                <button
-                  className="uniform-btn mt-2"
-                  onClick={handleCheckout}
-                  disabled={checkingOut}
-                >
-                  {checkingOut ? "Processing..." : "Checkout with Stripe"}
-                </button>
-                {error && <p style={{ color: "red" }}>{error}</p>}
-              </>
-            )}
+            <Card.Title>{product.name}</Card.Title>
+            <Card.Text>
+              {message}
+              </Card.Text>
+              <Card.Text>
+              ${(product.price / 100).toFixed(2)}
+              </Card.Text>
+            <Link to={stripeLink} target="_blank">
+              <button className="uniform-btn">Buy Me</button>
+            </Link>
           </Card.Body>
+          <Card.Footer className="text-muted">Available Now</Card.Footer>
+        </Card>
+      </div>
+    );
+  })}
+
+            <div className="shop-card">
+        <Card className="text-center uniform-card">
+          <Card.Header style={{ fontWeight: "bold" }}>
+            Diamond Dev Apparel
+          </Card.Header>
+          <Card.Img
+            className="shop-card-img"
+            src="../media/DiamondDevTransparent.png"
+          />
+          <Card.Body>
+            <Card.Title>Shop Our New Styles Now</Card.Title>
+            <Card.Text>
+              Discover the perfect blend of style and comfort with our exclusive
+              Diamond Dev Apparel collection!
+            </Card.Text>
+            <Link to="https://diamond-dev-apparel.printify.me/" target="_blank">
+              <button className="uniform-btn">Diamond Dev Apparel Shop</button>
+            </Link>
+          </Card.Body>
+          <Card.Footer className="text-muted">Shop Now</Card.Footer>
         </Card>
       </div>
     </div>
