@@ -9,6 +9,7 @@ import ContactForm from "./Components/ContactForm";
 import Scheduler from "./Components/Scheduler";
 import Footer from "./Components/Footer";
 import HomePage from "./Components/Pages/HomePage";
+import ShopStrengthPage from "./Components/Pages/ShopStrengthPage";
 
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";
@@ -33,6 +34,7 @@ function App() {
             <Route path="/schedule" element={<Scheduler />} />
             <Route path="/contact" element={<ContactForm />} />
             <Route path="/shop" element={<ShopPage />} />
+            <Route path="/strength-programs" element={<ShopStrengthPage />} />
           </Routes>
         </div>
         <Footer />
