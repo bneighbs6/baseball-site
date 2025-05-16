@@ -124,7 +124,7 @@ function HomePage() {
             </>
           )}
         </div>
-        {!isMobile && ( // Only show this part if not on mobile
+        {/* {!isMobile && ( // Only show this part if not on mobile
           <div className="uniform-container">
             <Card className="uniform-card">
               <Card.Title className="uniform-title">
@@ -146,7 +146,7 @@ function HomePage() {
               </button>
             </Card>
           </div>
-        )}
+        )} */}
       </div>
     );
 }

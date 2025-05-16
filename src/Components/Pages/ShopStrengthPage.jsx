@@ -6,7 +6,7 @@ import strengthProducts from "../../data/strengthProducts";
 function ShopStrengthPage() {
   return (
     <div className="uniform-container">
-      {/* This will be what determines what message and stripe link each shop card will have */}
+      {/* This will determine what message, stripe link, and footer each shop card will have */}
       {strengthProducts.map((product) => {
         // Define Stripe URL Link based on product name
         let stripeLink = "";
