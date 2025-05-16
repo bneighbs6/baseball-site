@@ -9,7 +9,7 @@ import ContactForm from "./Components/ContactForm";
 import Scheduler from "./Components/Scheduler";
 import Footer from "./Components/Footer";
 import HomePage from "./Components/Pages/HomePage";
-import ShopStrengthPage from "./Components/Pages/ShopStrengthPage";
+import ShopStrengthPage from "./Components/Pages/strength-page/ShopStrengthPage";
 
 // import { Elements } from "@stripe/react-stripe-js";
 // import { loadStripe } from "@stripe/stripe-js";

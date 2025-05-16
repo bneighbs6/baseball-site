@@ -1,7 +1,8 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import strengthProducts from "../../data/strengthProducts";
+import strengthProducts from "../../../data/strengthProducts";
+import "./shopStrengthPage.css";
 
 function ShopStrengthPage() {
   return (
@@ -38,7 +39,7 @@ function ShopStrengthPage() {
               <Card.Img className="shop-card-img" src={product.image} />
               <Card.Body>
                 <Card.Title>{product.name}</Card.Title>
-                <Card.Text>{message}</Card.Text>
+                <Card.Text className="description">{message}</Card.Text>
                 <Card.Text>${(product.price / 100).toFixed(2)}</Card.Text>
                 <Link to={stripeLink} target="_blank">
                   <button disabled={product.name === "The Rookie Lift" || product.name === "The Prospect Lift"} className="uniform-btn">Buy Me</button>
