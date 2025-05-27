@@ -18,7 +18,8 @@
   }
   
   .uniform-card .card-text.description {
-    height: 10px; /* tweak this to match your longest message */
+    height: 100px; /* tweak this to match your longest message */
+    overflow: scroll;
   }
 
   .card-title {

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Header from "./Components/Header";
 import NavigationBar from "./Components/NavigationBar";
-import ShopPage from "./Components/Pages/ShopPage";
+import ShopPage from "./Components/Pages/shopPage/ShopPage";
 import MeetTheCoach from "./Components/MeetTheCoach";
 import ContactForm from "./Components/ContactForm";
 import Scheduler from "./Components/Scheduler";
