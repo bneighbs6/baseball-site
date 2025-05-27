@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./shopPage.css"
 
 function ShopPage() {
     return (
@@ -14,7 +15,7 @@ function ShopPage() {
             />
             <Card.Body>
               <Card.Title>Shop Our New Styles Now</Card.Title>
-              <Card.Text>
+              <Card.Text className="description">
                 Discover the perfect blend of style and comfort with our
                 exclusive Diamond Dev Apparel collection! Each piece is designed
                 with high-quality materials to ensure you look great while
@@ -44,7 +45,7 @@ function ShopPage() {
             />
             <Card.Body>
               <Card.Title>Certified Strength & Conditioning Specialist (CSCS) Tested & Proven Programs</Card.Title>
-              <Card.Text>
+              <Card.Text className="description">
               Get ready to elevate your game with our CSCS Tested & Proven
                 Baseball Strength Programs! Designed by experts, these programs
                 focus on building strength, speed, and agility to help you
