@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope as faEnvelopeSolid } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope as faEnvelopeSolid  } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook } from '@fortawesome/free-brands-svg-icons';
 
 function Footer() {
     return (
@@ -11,6 +12,9 @@ function Footer() {
               icon={faEnvelopeSolid}
               className="fa-solid email-icon"
             />
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61576008284448" target="_blank">
+          <FontAwesomeIcon icon={faFacebook} className="fa-brands fa-facebook facebook-icon" />
           </a>
           <p>Connect With Us</p>
         </div>

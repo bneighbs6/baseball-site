@@ -265,7 +265,7 @@ code {
   color: #323232;
 }
 
-.email-icon {
+.email-icon, .facebook-icon {
   width: 50px; /* Set a fixed width for icons */
   height: 50px; /* Set a fixed height for icons */
   margin: 2px; /* Space around icons */
