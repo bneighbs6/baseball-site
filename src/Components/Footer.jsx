@@ -13,7 +13,7 @@ function Footer() {
               className="fa-solid email-icon"
             />
           </a>
-          <a href="https://www.facebook.com/profile.php?id=61576008284448" target="_blank">
+          <a href="https://www.facebook.com/profile.php?id=61576008284448" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faFacebook} className="fa-brands fa-facebook facebook-icon" />
           </a>
           <p>Connect With Us</p>
